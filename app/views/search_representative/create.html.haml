@@ -1,0 +1,37 @@
+%h1 integrantes de la camara
+
+%article
+  %h2
+    Busqueda: 
+    = params[:search][:name]
+  Selecciona un representante para ver su perfil e interactuar con el.
+  = link_to '<< volver', congresistas_path, :class => 'volver'
+  
+- @representantes.each do |partido_politico, representatives|
+  %article
+    .logo
+      = image_tag partido_politico.logo.url
+      %span
+        = partido_politico.name
+    .congresistas
+      - representatives.each_with_index do |representante, index|
+        .congresista
+          %ul
+            %li= image_tag(representante.photo(:thumb))
+            %li.nombre
+              %span nombre
+              %br
+              = link_to(representante.name, congresista_path(representante))
+              %br
+              %span.position= representante.position
+            %li
+              %span contacto
+              %br
+              = representante.email
+              %br
+              %span tel.
+              =representante.phone
+              %span twitter
+              =representante.twitter
+              
+              

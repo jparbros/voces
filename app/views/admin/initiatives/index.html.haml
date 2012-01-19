@@ -1,0 +1,22 @@
+.page-header
+  %h2 Iniciativas
+
+= link_to 'Nueva Iniciativa', new_admin_initiative_path  , :class => [:btn, :primary]
+%br
+%br
+
+%table.zebra-striped
+  %thead
+    %tr
+      %th #
+      %th Titulo
+      %th Presentado por
+      %th Presentado el
+      %th
+      %th
+      %th
+
+  %tbody
+    = render @initiatives
+
+= paginate @initiatives

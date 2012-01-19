@@ -1,0 +1,103 @@
+%h1 integrantes de la camara
+
+%aside
+  %h2
+    Twitter
+  .tweet
+    = "No disponible" unless @representante.twitter
+
+.congresista_content
+  %article
+    %h2
+      representante de
+      = @representante.region.name if @representante.region
+    
+    .primera-columna
+      = image_tag @representante.photo
+      %h4 iniciativas
+      %ul.iniciativas
+        - @representante.initiatives.each do |iniciativa|
+          %li
+            = link_to iniciativa.title[0..50] + '...', iniciativa_path(iniciativa)
+
+    .segunda-columna
+      %p
+        %span nombre
+        %span.nombre= @representante.name
+      
+      %p
+        %span partido politico
+        = image_tag @representante.political_party.logo.url(:thumb)
+        = @representante.political_party.name
+    
+      %p
+        %span email
+        = @representante.email
+    
+      %p
+        %span telefono
+        = @representante.phone
+    
+      %p
+        %span twitter
+        = "#{@representante.twitter || 'no disponible'}"
+      
+      %p
+        %span suplente
+        = @representante.substitute
+      
+      %p
+        %span fecha de nacimiento
+        = @representante.birthday
+      
+      %p
+        %span comisiones
+        - @representante.commissions.collect do |commision| 
+          = link_to commision.name + ',', comisione_path(commision)
+      
+      %p
+        %span biografia
+        = @representante.biography
+
+
+  %article
+    %h2 deja tu comentario
+
+    = form_for @comment, :url => congresista_comentarios_path(@representante) do |form|
+      .form-inputs
+        = form.text_field :author, :placeholder => 'Nombre', :class => 'span3 input-text'
+
+        = form.text_field :email, :placeholder => 'Email', :class => 'span4 input-text margin-left-15'
+
+        = form.text_area :comment, :placeholder => 'Mensaje', :class => 'span7 input-text', 'data-len' => 500
+
+      = hidden_field_tag :other_email
+
+      = submit_tag 'comenta', :class => 'submit span4'
+    
+    
+  %article
+    %h3 comentarios
+    - @comments.each do |comentario|
+      .comment
+        %p
+          %span
+            =comentario.author
+          = comentario.comment
+        - comentario.replies.each do |reply|
+          %p.reply
+            %span
+              = reply.author
+            = reply.comment
+
+<script>
+- if @representante.twitter
+  jQuery(function($){
+  $(".tweet").tweet({
+  username: "#{@representante.twitter}",
+  count: 10,
+  loading_text: "cargando tweets...",
+  template: "{text}"
+  });
+  });
+</script>

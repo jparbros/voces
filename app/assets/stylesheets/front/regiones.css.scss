@@ -1,0 +1,97 @@
+// Place all the styles related to the regiones controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  &.regiones, &.search_representative, &.partido_politico, &.comisiones {
+    table {
+      border: 1px solid #dddddd;
+      color: $grayish-cyan;
+      margin-top: 10px;
+
+      a, a:hover {
+        color: $grayish-cyan;
+      }
+
+      tr {
+        td, th {
+          border-left: 0;
+        }
+        &:hover {
+          td {
+            background-color: #f5fafa;
+          }
+        }
+        &.last {
+          border-bottom: 1px solid #333;
+        }
+      }
+    }
+    article {
+      @extend #content;
+      @include column(24, true);
+      margin: 10px 0;
+      padding: 10px;
+
+      a.volver {
+        color: $dark-mulberry;
+        text-transform: uppercase;
+      }
+
+      .logo {
+        @include column(5);
+        text-align: center;
+
+        span {
+          @include terminal-font(uppercase, $grey, 14px);
+          display: block;
+        }
+      }
+
+      .congresistas {
+        @include column-base(true);
+        border-left: 1px dashed $grey;
+        padding: 0 0 0 10px;
+        width: 735px;
+
+        .congresista {
+          @include column-base(true);
+          border-bottom: 1px solid #f1eee9;
+          margin: 0 0 10px;
+          padding: 0 0 10px;
+          width: 735px;
+
+          span {
+            @include terminal-font(uppercase, $dark-mulberry, 14px);
+
+            &.position {font-size: 13px; font-style: italic;}
+          }
+
+          ul {
+            li {
+              @include arial-font($grey, 18px);
+              float: left;
+              height: 50px;
+              margin: 0 20px 0 0;
+
+              &:last-child {
+                @include column(8);
+                border-left: 1px dashed $grey;
+                font-size: 13px;
+                font-style: italic;
+                margin: 0;
+                padding: 0 0 0 20px;
+              }
+
+              &.nombre { width: 300px;}
+            }
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

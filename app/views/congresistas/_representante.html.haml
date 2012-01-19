@@ -1,0 +1,27 @@
+%article.representante
+  %ul.datos
+    %li
+      = image_tag representante.political_party.logo.url(:thumb)
+    %li
+      .photo
+        = link_to image_tag(representante.photo(:thumb)), congresista_path(representante)
+      .name
+        = link_to representante.name, congresista_path(representante)
+    %li
+      %span cargo y entidad
+      = representante.position
+      |
+      = representante.region_name if representante.region
+
+  %ul.contadores
+    %li
+      - search = {:search => {:representative => representante.name}}
+      = link_to image_tag('front/iniciativa.png'), search_initiatives_path(search), :method => :post
+      %span
+        = representante.initiatives.count
+      iniciativas
+    %li 
+      comentarios
+    %li
+      = representante.comments_count
+  .bottom &nbsp;

@@ -1,0 +1,1759 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1326988608.528786:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%156a879b190e93653ec296c4a8633ad6I"logical_path;
+FI"front.css;
+TI"pathname;
+FI"0$root/app/assets/stylesheets/front.css.scss;
+FI"content_type;
+FI"text/css;
+FI"
+mtime;
+FI"2012-01-19T09:56:38-06:00;
+FI"	body;
+FI"¾ö/*
+*/
+@import url(http://fonts.googleapis.com/css?family=Terminal+Dosis:200,600,500);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+/* line 17, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+body > .container, .container-fluid {
+  padding-top: 50px !important;
+}
+
+/* line 9, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+html {
+  background: url("/assets/front/header-bk.png") repeat-x, url("/assets/front/background.png") repeat;
+}
+
+/* line 11, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+body {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: url("/assets/front/footer-bk.png") repeat-x center bottom;
+}
+
+/* line 16, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+a {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* line 20, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+#container {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #container {
+  overflow-x: hidden;
+}
+
+/* line 27, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+h1 {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: capitalize;
+  background: url("/assets/front/top-bg.png") no-repeat;
+  margin: 20px 0 0 0;
+  padding: 5px;
+}
+
+/* line 34, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+h2 {
+  color: #a72222;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+  margin: 20px 10px 10px 20px;
+  padding: 0 0 5px;
+}
+/* line 40, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+h2.estrella {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: url("/assets/front/star-blue.png") no-repeat;
+  border-bottom: 1px solid #cccccc;
+  padding-left: 30px;
+}
+/* line 47, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+article h2 {
+  margin: 20px 10px 10px 0px;
+}
+
+/* line 52, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 56, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+h4 {
+  border-bottom: 1px solid #99cccc;
+  color: #99cccc;
+  font-size: 14px;
+  padding: 10px 0 5px;
+  margin: 0 0 10px;
+}
+
+/* line 64, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html header {
+  overflow-x: hidden;
+}
+/* line 66, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header img {
+  float: left;
+}
+/* line 67, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header nav {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: right;
+  margin-top: 100px;
+}
+/* line 71, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header nav ul {
+  list-style: none;
+}
+/* line 73, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header nav ul li {
+  border-left: 1px solid white;
+  float: left;
+  padding: 0 25px 0 5px;
+  text-transform: uppercase;
+}
+/* line 78, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+header nav ul li a {
+  color: white;
+}
+
+/* line 86, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+section#main-content {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html section#main-content {
+  overflow-x: hidden;
+}
+
+/* line 90, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+footer {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  color: #111018;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 20px 0 20px 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html footer {
+  overflow-x: hidden;
+}
+/* line 95, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+footer ul li {
+  float: left;
+  border-left: 1px solid #111018;
+  margin: 0 10px 0 0;
+  padding: 10px;
+}
+
+/* line 104, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.input-text, aside .input, #home-page article#home form input, #home-page article#home form select {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f0f0ea;
+  border: 0 none;
+  box-shadow: none;
+  height: 30px;
+  margin: 0 0 0 20px;
+  padding: 5px;
+}
+
+/* line 114, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.submit-button, aside .button, #iniciativas .haz-comentario .comenta-content .submit, #contacto article .submit {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #99cccc;
+  border: 0 none;
+  box-shadow: none;
+  height: 30px;
+}
+
+/* line 122, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  background-color: white;
+  padding-bottom: 10px;
+  min-height: 600px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html aside {
+  overflow-x: hidden;
+}
+/* line 128, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside .input {
+  margin-bottom: 10px;
+  width: 190px;
+}
+/* line 134, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside .button {
+  color: white;
+  margin: 5px 0 0 20px;
+  width: 200px;
+}
+/* line 142, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside ul.ul-aside {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 0 20px;
+}
+/* line 146, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside ul.ul-aside li {
+  margin: 0 0 10px 0;
+}
+/* line 152, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+aside textarea {
+  height: 100px !important;
+}
+
+/* line 157, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+article#content, article.iniciativa, #congresistas article, #home-page article#home, #contacto article, html.regiones article, html.search_representative article, html.partido_politico article, html.comisiones article {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 630px;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0 -40px 1.5em 40px;
+  background-color: white;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article#content, * html article.iniciativa, * html #congresistas article, #congresistas * html article, * html #home-page article#home, #home-page * html article#home, * html #contacto article, #contacto * html article, * html.regiones article, * html.search_representative article, * html.partido_politico article, * html.comisiones article {
+  overflow-x: hidden;
+}
+
+/* line 164, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.hide {
+  display: none;
+}
+
+/* line 165, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.show {
+  display: block;
+}
+
+/* line 166, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+  opacity: 0;
+}
+/* line 174, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.fade .in {
+  opacity: 1;
+}
+
+/* line 177, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.tweet {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: none;
+  margin: 0 0 100px 20px;
+  width: 200px;
+}
+/* line 183, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.tweet ul li {
+  border-bottom: 1px solid #c7c5c5;
+  margin: 10px 0 0 0;
+  padding: 0 0 10px 0;
+}
+/* line 187, /Users/jparbros/Work/voces/app/assets/stylesheets/front/_base.css.scss */
+.tweet ul li a {
+  font-size: 10px;
+  text-transform: none;
+}
+
+/* line 7, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas section.container {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 710px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #iniciativas section.container {
+  overflow-x: hidden;
+}
+/* line 12, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .first-child, #iniciativas article.iniciativa ul.votacion-pleno li:first-child, article.iniciativa ul.votacion-pleno #iniciativas li:first-child, #iniciativas article.iniciativa ul.estado li:first-child, article.iniciativa ul.estado #iniciativas li:first-child, #iniciativas article.iniciativa ul.votacion-oficial li:first-child, article.iniciativa ul.votacion-oficial #iniciativas li:first-child, #iniciativas article.iniciativa ul.votaciones-detalles li:first-child, article.iniciativa ul.votaciones-detalles #iniciativas li:first-child, #iniciativas article.iniciativa ul.votaciones-logos li:first-child, article.iniciativa ul.votaciones-logos #iniciativas li:first-child, #iniciativas article.iniciativa ul.votacion-local li:first-child, article.iniciativa ul.votacion-local #iniciativas li:first-child, #iniciativas article.iniciativa ul.votacion-local:first-child, article.iniciativa #iniciativas ul.votacion-local:first-child, #iniciativas article.iniciativa ul.etapa li:first-child, article.iniciativa ul.etapa #iniciativas li:first-child, #iniciativas article.iniciativa ul.recursos li:first-child, article.iniciativa ul.recursos #iniciativas li:first-child, #iniciativas article.iniciativa .content ul.estado li:first-child, article.iniciativa .content ul.estado #iniciativas li:first-child, #iniciativas article.iniciativa .content ul.votacion-oficial li:first-child, article.iniciativa .content ul.votacion-oficial #iniciativas li:first-child, #iniciativas article.iniciativa .content ul.votacion-local li:first-child, article.iniciativa .content ul.votacion-local #iniciativas li:first-child, #iniciativas article.iniciativa .content ul.votacion-local:first-child, article.iniciativa .content #iniciativas ul.votacion-local:first-child {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: 0;
+  padding-right: 5px;
+  text-align: right;
+  width: 120px;
+}
+/* line 20, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 670px;
+  background: url("/assets/front/h1-bg.png") repeat-x top, url("/assets/front/h1-bg.png") repeat-x bottom;
+  margin: 0 0 20px 40px;
+  padding: 12px 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #iniciativas .haz-comentario {
+  overflow-x: hidden;
+}
+/* line 26, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 670px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #iniciativas .haz-comentario .comenta-content {
+  overflow-x: hidden;
+}
+/* line 31, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content form {
+  float: left;
+  margin: 0 0 20px 20px;
+}
+/* line 35, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content form input, #iniciativas .haz-comentario .comenta-content form textarea {
+  background-color: white;
+  border: 1px solid #cccccc;
+}
+/* line 41, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content .form-inputs {
+  display: inline;
+  float: left;
+  width: 400px;
+}
+/* line 46, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content .form-inputs label {
+  float: none;
+}
+/* line 49, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content .form-inputs label.contra {
+  margin-left: 50px;
+}
+/* line 53, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content p {
+  margin-bottom: 10px;
+}
+/* line 57, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content textarea {
+  height: 150px;
+  margin: 10px 0 0;
+}
+/* line 62, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .haz-comentario .comenta-content .submit {
+  background-color: #b7e1e1;
+  color: white;
+  font-size: 24px;
+  height: 40px;
+  margin: 80px 0 0 15px;
+}
+/* line 73, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .pagination {
+  float: right;
+}
+/* line 75, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .pagination .active a {
+  background-color: #fac87a;
+}
+/* line 77, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+#iniciativas .pagination a:hover {
+  background-color: #faa17a;
+}
+
+/* line 82, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+.wrapper {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 710px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .wrapper {
+  overflow-x: hidden;
+}
+
+/* line 87, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa {
+  background: url("/assets/front/iniciativa-bg.png") repeat-x 0 bottom white;
+  padding: 0 10px 30px 30px;
+}
+/* line 92, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa.main {
+  background: url("/assets/front/main-bg.png") repeat-x 0 bottom white;
+}
+/* line 96, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .comments {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px;
+  margin: 10px 10px 0 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .comments {
+  overflow-x: hidden;
+}
+/* line 100, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .comments.push {
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0 -40px 1.5em 40px;
+  margin-top: 10px;
+}
+/* line 102, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .comments h4 {
+  border: 0;
+  color: white;
+  height: 20px;
+  padding: 7px 0 0 5px;
+  width: 200px;
+}
+/* line 109, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .comments h4.favor {
+  background-color: #b7e1e1;
+}
+/* line 113, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .comments h4.contra {
+  background-color: #faa17a;
+}
+/* line 120, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .votaciones {
+  display: inline;
+  float: left;
+  margin-right: 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .votaciones {
+  overflow-x: hidden;
+}
+/* line 122, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa #separator {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 670px;
+  background-color: #fac87a;
+  height: 20px;
+  margin: -12px 0 0 -30px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa #separator {
+  overflow-x: hidden;
+}
+/* line 129, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul {
+  display: inline;
+  float: left;
+  margin-top: 10px;
+  min-width: 550px;
+}
+/* line 135, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.temas {
+  color: #b7e1e1;
+  font-family: Arial, san-serif;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+/* line 139, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.temas li {
+  border-left: 1px solid #b7e1e1;
+  float: left;
+  padding: 0 10px;
+}
+/* line 144, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.temas li a {
+  color: #b7e1e1;
+  font-family: Arial, san-serif;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+/* line 147, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.temas li a:hover {
+  color: #b7e1e1;
+}
+/* line 150, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.temas li:last-child {
+  border-right: 1px solid #99cccc;
+}
+/* line 156, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-pleno {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  margin-top: 10px;
+  border-top: 1px solid #c7c5c5;
+  width: 610px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa ul.votacion-pleno {
+  overflow-x: hidden;
+}
+/* line 162, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-pleno li {
+  color: #c7c5c5;
+  font-family: Arial, san-serif;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: capitalize;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+}
+/* line 169, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-pleno li.favor {
+  border-right: 1px solid #606060;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+/* line 175, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-pleno li:first-child {
+  text-transform: uppercase;
+}
+/* line 182, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 185, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #c7c5c5;
+  float: left;
+  height: 24px;
+  margin-left: 1px;
+  padding-top: 6px;
+  text-align: center;
+  width: 93px;
+}
+/* line 195, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado li.presentation {
+  background-color: #a196a5;
+  color: white;
+}
+/* line 196, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado li.commission {
+  background-color: #827387;
+  color: white;
+}
+/* line 197, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado li.plenary {
+  background-color: #5b4763;
+  color: white;
+}
+/* line 198, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.estado li.project {
+  background-color: #34193e;
+  color: white;
+}
+/* line 206, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-oficial {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 209, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-oficial li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+}
+/* line 216, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-oficial li.a-favor {
+  background-color: #b7e1e1;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 222, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-oficial li.en-contra {
+  color: #000;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 228, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-oficial li.no-votada {
+  border: 1px solid #c7c5c5;
+  width: 383px;
+}
+/* line 239, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votaciones-detalles, article.iniciativa ul.votaciones-logos {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  margin-top: 10px;
+  border-bottom: 1px solid #c7c5c5;
+  border-top: 1px solid #c7c5c5;
+  width: 610px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa ul.votaciones-detalles, * html article.iniciativa ul.votaciones-logos {
+  overflow-x: hidden;
+}
+/* line 248, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votaciones-detalles li, article.iniciativa ul.votaciones-logos li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: left;
+  height: 77px;
+  padding-top: 6px;
+  text-align: center;
+  width: 65px;
+}
+/* line 256, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votaciones-detalles li .barra, article.iniciativa ul.votaciones-logos li .barra {
+  margin: 0 auto;
+  width: 45px;
+}
+/* line 268, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votaciones-logos {
+  border: 0;
+}
+/* line 270, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 273, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+}
+/* line 280, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li a {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 283, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li a:hover {
+  color: #606060;
+}
+/* line 286, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li.a-favor {
+  background-color: #b7e1e1;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 292, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li.en-contra {
+  color: #000;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 298, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.votacion-local li.no-votada {
+  border: 1px solid #c7c5c5;
+  width: 190px;
+}
+/* line 310, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.etapa li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-left: 1px solid #c7c5c5;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  padding-left: 5px;
+  text-align: left;
+  width: 370px;
+}
+/* line 320, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.etapa li:first-child {
+  border: 0;
+}
+/* line 325, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.recursos li {
+  border-left: 1px solid #c7c5c5;
+  float: left;
+  padding-left: 5px;
+}
+/* line 330, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.recursos li:first-child {
+  border: 0;
+}
+/* line 334, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  margin-top: 10px;
+  margin: 30px 0 0 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa ul.botones {
+  overflow-x: hidden;
+}
+/* line 339, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li {
+  float: left;
+  height: 20px;
+  margin: 0 10px 0 0;
+  width: 170px;
+  padding: 15px;
+  text-align: center;
+}
+/* line 347, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li.first-child, article.iniciativa ul.botones ul.votacion-pleno li:first-child, article.iniciativa ul.votacion-pleno ul.botones li:first-child, article.iniciativa ul.botones ul.estado li:first-child, article.iniciativa ul.estado ul.botones li:first-child, article.iniciativa ul.botones ul.votacion-oficial li:first-child, article.iniciativa ul.votacion-oficial ul.botones li:first-child, article.iniciativa ul.botones ul.votaciones-detalles li:first-child, article.iniciativa ul.votaciones-detalles ul.botones li:first-child, article.iniciativa ul.botones ul.votaciones-logos li:first-child, article.iniciativa ul.votaciones-logos ul.botones li:first-child, article.iniciativa ul.botones ul.votacion-local li:first-child, article.iniciativa ul.votacion-local ul.botones li:first-child, article.iniciativa ul.botones ul.etapa li:first-child, article.iniciativa ul.etapa ul.botones li:first-child, article.iniciativa ul.botones ul.recursos li:first-child, article.iniciativa ul.recursos ul.botones li:first-child, article.iniciativa ul.botones .content ul.estado li:first-child, article.iniciativa .content ul.estado ul.botones li:first-child, article.iniciativa ul.botones .content ul.votacion-oficial li:first-child, article.iniciativa .content ul.votacion-oficial ul.botones li:first-child, article.iniciativa ul.botones .content ul.votacion-local li:first-child, article.iniciativa .content ul.votacion-local ul.botones li:first-child {
+  margin-left: 20px;
+}
+/* line 349, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li.favor {
+  background-color: #b7e1e1;
+}
+/* line 353, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li.contra {
+  background: #faa17a;
+}
+/* line 357, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li.comenta {
+  background: url("/assets/front/comenta-bg.png") no-repeat 45px 13px #a72222;
+}
+/* line 361, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa ul.botones li a {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  height: 40px;
+  width: 200px;
+}
+/* line 372, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 510px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .content {
+  overflow-x: hidden;
+}
+/* line 375, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 510px;
+  margin-bottom: 10px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .content ul {
+  overflow-x: hidden;
+}
+/* line 379, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.temas {
+  color: #99cccc;
+  font-family: Arial, san-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: downcase;
+  margin-bottom: 5px;
+}
+/* line 383, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.temas li {
+  color: #99cccc;
+  font-family: Arial, san-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: downcase;
+  border-left: 1px solid #99cccc;
+  float: left;
+  padding: 0 10px;
+}
+/* line 389, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.temas li:last-child {
+  border-right: 1px solid #99cccc;
+}
+/* line 393, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.temas li a {
+  color: #99cccc;
+  font-family: Arial, san-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: downcase;
+}
+/* line 399, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.estado {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 402, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.estado li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #c7c5c5;
+  float: left;
+  height: 24px;
+  margin-left: 1px;
+  padding-top: 6px;
+  text-align: center;
+  width: 93px;
+}
+/* line 418, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-oficial {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 421, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-oficial li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+}
+/* line 428, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-oficial li.a-favor {
+  background-color: #b7e1e1;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 434, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-oficial li.en-contra {
+  color: #c7c5c5;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 440, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-oficial li.no-votada {
+  border: 1px solid #c7c5c5;
+  width: 383px;
+}
+/* line 452, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local {
+  border-top: 1px solid #c7c5c5;
+}
+/* line 455, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local li {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  float: left;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+}
+/* line 462, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local li a {
+  color: #606060;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 466, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local li.a-favor {
+  background-color: #c7c5c5;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 472, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local li.en-contra {
+  color: #c7c5c5;
+  min-width: 57px;
+  max-width: 327px;
+}
+/* line 478, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .content ul.votacion-local li.no-votada {
+  border: 1px solid #c7c5c5;
+  width: 190px;
+}
+/* line 495, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 110px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .aside {
+  overflow-x: hidden;
+}
+/* line 498, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  text-align: right;
+  margin: 0 0 0 30px;
+  width: 85px;
+  min-width: 85px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html article.iniciativa .aside ul {
+  overflow-x: hidden;
+}
+/* line 505, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 5px;
+  padding: 0 5px 0 0;
+}
+/* line 510, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li a {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 514, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li span {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 519, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.comenta {
+  background: url("/assets/front/comenta-bg.png") no-repeat scroll 3px 10px #a72222;
+  height: 35px;
+  padding-top: 5px;
+}
+/* line 525, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.votos {
+  background-color: #faa17a;
+  height: 75px;
+}
+/* line 530, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.comentarios {
+  background-color: #fac87a;
+  height: 75px;
+}
+/* line 535, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.numero_iniciativa {
+  background-color: #c7c5c5;
+}
+/* line 538, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.numero_iniciativa span {
+  font-size: 30px;
+}
+/* line 543, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.share .share-fb iframe {
+  display: block;
+}
+/* line 547, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa .aside ul li.share .share-tw {
+  margin-top: 5px;
+}
+/* line 555, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+/* line 559, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.info {
+  padding: 30px 0 0 0;
+}
+/* line 561, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.info span a {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #a72222;
+}
+/* line 567, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.comment {
+  border-bottom: 1px solid #c7c5c5;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+/* line 572, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.comment span {
+  display: block;
+  font-weight: bold;
+}
+/* line 578, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.description {
+  color: #111018;
+  margin-bottom: 40px;
+}
+/* line 582, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+article.iniciativa p.description a {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/* line 591, /Users/jparbros/Work/voces/app/assets/stylesheets/front/iniciativas.css.scss */
+.modal textarea {
+  height: 150px;
+}
+
+/* line 6, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas article {
+  padding: 0 10px 15px 30px;
+}
+/* line 10, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas article .primera-columna {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 230px;
+  padding-right: 40px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #congresistas article .primera-columna {
+  overflow-x: hidden;
+}
+/* line 15, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas article .segunda-columna {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 350px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #congresistas article .segunda-columna {
+  overflow-x: hidden;
+}
+/* line 19, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas article .comentarios {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 630px;
+  border-top: 1px solid #c7c5c5;
+  border-bottom: 1px solid #c7c5c5;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #congresistas article .comentarios {
+  overflow-x: hidden;
+}
+/* line 24, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas article .comentarios p {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-top: 1px solid #c7c5c5;
+  padding-top: 10px;
+}
+/* line 31, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas aside {
+  background-color: white;
+}
+/* line 34, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas p {
+  margin-bottom: 10px;
+}
+/* line 37, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas p span {
+  display: block;
+  color: #99cccc;
+}
+/* line 40, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas p span.nombre {
+  font-size: 18px;
+  color: #606060;
+}
+/* line 45, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas ul.iniciativas {
+  list-style: none;
+}
+/* line 48, /Users/jparbros/Work/voces/app/assets/stylesheets/front/congresistas.css.scss */
+#congresistas ul.iniciativas li {
+  border-bottom: 1px solid #c7c5c5;
+  margin: 0 0 5px;
+  padding: 0 0 5px;
+}
+
+/* line 7, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home {
+  padding: 20px;
+}
+/* line 11, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home img {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px;
+  margin-top: -60px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home img {
+  overflow-x: hidden;
+}
+/* line 16, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 350px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home form {
+  overflow-x: hidden;
+}
+/* line 19, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form label {
+  font-size: 18px;
+  text-align: left;
+  width: 160px;
+}
+/* line 25, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form input {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 350px;
+  margin: 0 0 35px 0;
+  width: 330px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home form input {
+  overflow-x: hidden;
+}
+/* line 33, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form select {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  margin-left: 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home form select {
+  overflow-x: hidden;
+}
+/* line 39, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form .input {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  margin-left: 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home form .input {
+  overflow-x: hidden;
+}
+/* line 44, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home form .button {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+  background-color: #99cccc;
+  color: white;
+  font-size: 30px;
+  height: 50px;
+  margin-top: 35px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page article#home form .button {
+  overflow-x: hidden;
+}
+/* line 55, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page article#home h2 {
+  padding-left: 280px;
+}
+/* line 61, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside {
+  min-height: 430px;
+}
+/* line 64, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside p {
+  color: #606060;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin: 0 0 10px 20px;
+}
+/* line 69, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside p.info span {
+  color: #a72222;
+}
+/* line 74, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside p.description {
+  color: #111018;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 0 5px 5px 20px;
+  padding-bottom: 20px;
+}
+/* line 84, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.info {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  font-size: 11px;
+  width: 125px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page aside ul.info {
+  overflow-x: hidden;
+}
+/* line 89, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.info li {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 0;
+}
+/* line 93, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.info li span {
+  color: #111018;
+  font-family: Arial, san-serif;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 100, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  text-align: right;
+  width: 85px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page aside ul.colores {
+  overflow-x: hidden;
+}
+/* line 105, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 5px;
+  padding: 0 5px 0 0;
+}
+/* line 110, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li a {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 114, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li span {
+  color: white;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 118, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li.comenta {
+  background: url("/assets/front/comenta-bg.png") no-repeat scroll 3px 10px #a72222;
+  height: 35px;
+  padding-top: 5px;
+}
+/* line 124, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li.votos {
+  background-color: #faa17a;
+  height: 75px;
+}
+/* line 129, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page aside ul.colores li.comentarios {
+  background-color: #fac87a;
+  height: 75px;
+}
+/* line 138, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page .main-banner {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  background-color: white;
+  margin: 20px 0 20px 0;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #home-page .main-banner {
+  overflow-x: hidden;
+}
+/* line 143, /Users/jparbros/Work/voces/app/assets/stylesheets/front/home.css.scss */
+#home-page .main-banner img {
+  margin-left: 15px;
+}
+
+/* line 6, /Users/jparbros/Work/voces/app/assets/stylesheets/front/contacto.css.scss */
+#contacto article {
+  padding: 0 10px 15px 30px;
+}
+/* line 10, /Users/jparbros/Work/voces/app/assets/stylesheets/front/contacto.css.scss */
+#contacto article p {
+  margin-bottom: 10px;
+}
+/* line 14, /Users/jparbros/Work/voces/app/assets/stylesheets/front/contacto.css.scss */
+#contacto article textarea {
+  height: 150px;
+}
+/* line 18, /Users/jparbros/Work/voces/app/assets/stylesheets/front/contacto.css.scss */
+#contacto article .submit {
+  color: white;
+  margin: 0 0 0 20px;
+}
+/* line 24, /Users/jparbros/Work/voces/app/assets/stylesheets/front/contacto.css.scss */
+#contacto aside {
+  background: url("/assets/images/tweet-bird.png") no-repeat white;
+}
+
+/* line 7, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones table, html.search_representative table, html.partido_politico table, html.comisiones table {
+  border: 1px solid #dddddd;
+  color: #99cccc;
+  margin-top: 10px;
+}
+/* line 12, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones table a, html.regiones table a:hover, html.search_representative table a, html.search_representative table a:hover, html.partido_politico table a, html.partido_politico table a:hover, html.comisiones table a, html.comisiones table a:hover {
+  color: #99cccc;
+}
+/* line 17, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones table tr td, html.regiones table tr th, html.search_representative table tr td, html.search_representative table tr th, html.partido_politico table tr td, html.partido_politico table tr th, html.comisiones table tr td, html.comisiones table tr th {
+  border-left: 0;
+}
+/* line 21, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones table tr:hover td, html.search_representative table tr:hover td, html.partido_politico table tr:hover td, html.comisiones table tr:hover td {
+  background-color: #f5fafa;
+}
+/* line 25, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones table tr.last, html.search_representative table tr.last, html.partido_politico table tr.last, html.comisiones table tr.last {
+  border-bottom: 1px solid #333;
+}
+/* line 30, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article, html.search_representative article, html.partido_politico article, html.comisiones article {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+  margin: 10px 0;
+  padding: 10px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html html.regiones article, * html html.search_representative article, * html html.partido_politico article, * html html.comisiones article {
+  overflow-x: hidden;
+}
+/* line 36, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article a.volver, html.search_representative article a.volver, html.partido_politico article a.volver, html.comisiones article a.volver {
+  color: red;
+  text-transform: uppercase;
+}
+/* line 41, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .logo, html.search_representative article .logo, html.partido_politico article .logo, html.comisiones article .logo {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 190px;
+  text-align: center;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html html.regiones article .logo, * html html.search_representative article .logo, * html html.partido_politico article .logo, * html html.comisiones article .logo {
+  overflow-x: hidden;
+}
+/* line 45, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .logo span, html.search_representative article .logo span, html.partido_politico article .logo span, html.comisiones article .logo span {
+  color: #cccccc;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+}
+/* line 51, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas, html.search_representative article .congresistas, html.partido_politico article .congresistas, html.comisiones article .congresistas {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  border-left: 1px dashed #cccccc;
+  padding: 0 0 0 10px;
+  width: 735px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html html.regiones article .congresistas, * html html.search_representative article .congresistas, * html html.partido_politico article .congresistas, * html html.comisiones article .congresistas {
+  overflow-x: hidden;
+}
+/* line 57, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista, html.search_representative article .congresistas .congresista, html.partido_politico article .congresistas .congresista, html.comisiones article .congresistas .congresista {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  border-bottom: 1px solid #f1eee9;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  width: 735px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html html.regiones article .congresistas .congresista, * html html.search_representative article .congresistas .congresista, * html html.partido_politico article .congresistas .congresista, * html html.comisiones article .congresistas .congresista {
+  overflow-x: hidden;
+}
+/* line 64, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista span, html.search_representative article .congresistas .congresista span, html.partido_politico article .congresistas .congresista span, html.comisiones article .congresistas .congresista span {
+  color: red;
+  font-family: 'Terminal Dosis', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* line 67, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista span.position, html.search_representative article .congresistas .congresista span.position, html.partido_politico article .congresistas .congresista span.position, html.comisiones article .congresistas .congresista span.position {
+  font-size: 13px;
+  font-style: italic;
+}
+/* line 71, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista ul li, html.search_representative article .congresistas .congresista ul li, html.partido_politico article .congresistas .congresista ul li, html.comisiones article .congresistas .congresista ul li {
+  color: #cccccc;
+  font-family: Arial, san-serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: left;
+  height: 50px;
+  margin: 0 20px 0 0;
+}
+/* line 77, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista ul li:last-child, html.search_representative article .congresistas .congresista ul li:last-child, html.partido_politico article .congresistas .congresista ul li:last-child, html.comisiones article .congresistas .congresista ul li:last-child {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  border-left: 1px dashed #cccccc;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+/* line 147, /Users/jparbros/.rvm/gems/ruby-1.9.3-p0@voces/gems/compass-0.12.alpha.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html html.regiones article .congresistas .congresista ul li:last-child, * html html.search_representative article .congresistas .congresista ul li:last-child, * html html.partido_politico article .congresistas .congresista ul li:last-child, * html html.comisiones article .congresistas .congresista ul li:last-child {
+  overflow-x: hidden;
+}
+/* line 86, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article .congresistas .congresista ul li.nombre, html.search_representative article .congresistas .congresista ul li.nombre, html.partido_politico article .congresistas .congresista ul li.nombre, html.comisiones article .congresistas .congresista ul li.nombre {
+  width: 300px;
+}
+/* line 92, /Users/jparbros/Work/voces/app/assets/stylesheets/front/regiones.css.scss */
+html.regiones article p, html.search_representative article p, html.partido_politico article p, html.comisiones article p {
+  margin-bottom: 10px;
+}
+
+/*
+* @import 'front/entiende';
+* @import 'front/comenta';
+*/
+/* line 27, /Users/jparbros/Work/voces/app/assets/stylesheets/front.css.scss */
+a {
+  text-decoration: none;
+}
+;
+FI"asset_paths;
+F[I":$root/vendor/assets/stylesheets/twitter-bootstrap.css;
+FI"0$root/app/assets/stylesheets/front.css.scss;
+FI"dependency_paths;
+F[{I"	path;
+FI"0$root/app/assets/stylesheets/front.css.scss;
+FI"
+mtime;
+FIu:	Timeh€  °†:@_zoneI"CST;
+T:offsetiþ «I"hexdigest;
+F"%8bdcd50cf040b910e35fec0aba1b7c0e{I"	path;
+FI"8$root/app/assets/stylesheets/front/_colors.css.scss;
+FI"
+mtime;
+FIu;h€  P‹;I"CST;
+T;iþ «I"hexdigest;
+F"%f89c2b36bdf36ee20f4f0254be5d7c5b{I"	path;
+FI"8$root/app/assets/stylesheets/front/_typography.scss;
+FI"
+mtime;
+FIu;o€  PÊ;I"CST;
+T;iþ «I"hexdigest;
+F"%d4659aeb892e624dd42833f0c44e454a{I"	path;
+FI"6$root/app/assets/stylesheets/front/_base.css.scss;
+FI"
+mtime;
+FIu;N€  àJ;I"CST;
+T;iþ «I"hexdigest;
+F"%a9ad5af0649503a7c925ef6796a00eb8{I"	path;
+FI"<$root/app/assets/stylesheets/front/iniciativas.css.scss;
+FI"
+mtime;
+FIu;o€  `â;I"CST;
+T;iþ «I"hexdigest;
+F"%a01413d2c5d6a96ff7a1aa8fff55f194{I"	path;
+FI"=$root/app/assets/stylesheets/front/congresistas.css.scss;
+FI"
+mtime;
+FIu;h€  0;I"CST;
+T;iþ «I"hexdigest;
+F"%0ca346bf1ef95f496443e492e771bbe0{I"	path;
+FI"5$root/app/assets/stylesheets/front/home.css.scss;
+FI"
+mtime;
+FIu;g€  @Ò;I"CST;
+T;iþ «I"hexdigest;
+F"%cc268cdf1b099524badd06c580beef59{I"	path;
+FI"9$root/app/assets/stylesheets/front/contacto.css.scss;
+FI"
+mtime;
+FIu;h€   q;I"CST;
+T;iþ «I"hexdigest;
+F"%4b5e214d95a91ee157be543155bfd846{I"	path;
+FI"?$root/app/assets/stylesheets/front/representantes.css.scss;
+FI"
+mtime;
+FIu;N€   ;I"CST;
+T;iþ «I"hexdigest;
+F"%9bf5475cd46419d98e3e8073099c721c{I"	path;
+FI"9$root/app/assets/stylesheets/front/regiones.css.scss;
+FI"
+mtime;
+FIu;o€  @Ý;I"CST;
+T;iþ «I"hexdigest;
+F"%e88d577f6e9359cbd82727ca595167c4{I"	path;
+FI":$root/vendor/assets/stylesheets/twitter-bootstrap.css;
+FI"
+mtime;
+FIu;Îì€  0å;I"CST;
+T;iþ «I"hexdigest;
+F"%6ac1fb1740847c28abe862e5694ebde9I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,0 +1,31 @@
+%aside
+  %ul
+    %li{:class => "#{(params[:controller] == 'entiende')? 'selected' : ''}"}
+      %a{:href => "#{entiende_tu_congreso_path}"}
+        %section.image= image_tag 'front/como_curul.png'
+        %section.title
+          %h4 ¿como funciona curul 501?
+
+    %li{:class => "#{(params[:controller] == 'proceso_legislativo')? 'selected' : ''}"}
+      %a{:href => "#{proceso_legislativo_path}"}
+        %section.image= image_tag 'front/proceso_legislativo.png'
+        %section.title
+          %h4 
+            ¿como funciona el proceso 
+            %br
+            legislativo?
+
+    %li{:class => "#{(params[:controller] == 'funciona_congreso')? 'selected' : ''}"}
+      %a{:href => "#{como_funciona_congreso_path}"}
+        %section.image= image_tag 'front/como_funciona.png'
+        %section.title
+          %h4 
+            ¿como funciona el 
+            %br
+            congreso?
+
+    %li{:class => "#{(params[:controller] == 'abc_legislativo')? 'selected' : ''}"}
+      %a{:href => "#{abc_legislativo_path}"}  
+        %section.image= image_tag 'front/abc.png'
+        %section.title
+          %h4 abc legislativo

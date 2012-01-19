@@ -1,0 +1,156 @@
+#iniciativas
+  %h1 iniciativas
+  .content
+    %aside
+      %h2
+        buscar iniciativa
+
+      = form_tag search_initiatives_path, :method => :post do |form|
+
+        = text_field_tag 'search[keywords]', '', :placeholder => 'palabras clave', :class => 'input'
+
+        = submit_tag :buscar, :class => 'button'
+
+      %h2
+        temas
+      %ul.ul-aside
+        - @temas.each do |tema|
+          %li= link_to tema.name, tema_path(tema)
+
+    .wrapper
+      %section.container
+        %article.iniciativa{:class => "#{(@iniciativa.main?)? 'main' :  ''}"}
+          .main
+            .content
+              .iniciativa_info
+                %p.info
+                  = I18n.localize(@iniciativa.presented_at, :format => :month_year)
+                  %br
+                  Propuesta por:
+                  %span
+                    = link_to @iniciativa.representative.name, congresista_path(@iniciativa.representative) if @iniciativa.representative
+
+                %p.description
+                  = @iniciativa.description
+
+              - temas(@iniciativa)
+
+              - estado_de_iniciativa(@iniciativa)
+
+              %ul.etapa
+                %li etapa
+                %li= @iniciativa.state_formated
+
+              %ul.etapa
+                %li descripcion
+                %li
+                  - state_description(@iniciativa.state)
+
+              %ul.recursos
+                %li recursos adicionales
+                %li= link_to 'gaceta parlamentaria', @iniciativa.additional_resources
+
+            .aside
+              %ul
+                %li.votos
+                  %span
+                    = @iniciativa.total_votes
+                  votos
+                %li.comentarios
+                  %span
+                    = @iniciativa.comments.count
+                  comentarios
+                %li.numero_iniciativa
+                  %span= @iniciativa.id
+                  #{'#'} de iniciativa
+                %li.share
+                  .share-fb
+                    <a name="fb_share" type="button" share_url="#{iniciativa_url(@iniciativa)}">Enviar</a>
+                  .share-tw
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="es" data-text="#{@iniciativa.description[0..70]}..." data-url="#{iniciativa_url(@iniciativa)}">Tweet</a>
+
+          %ul.botones
+            - if cookies["voted_#{@iniciativa.id}"]
+              %li.favor= link_to "vota a favor", ""
+              %li.contra= link_to "vota en contra", ""
+            - else
+              %li.favor= link_to "vota a favor", iniciativa_vote_up_path(@iniciativa), :method => :post, :class => 'favor'
+              %li.contra= link_to "vota en contra", iniciativa_vote_down_path(@iniciativa), :method => :post, :class => 'contra'
+            %li.comenta= link_to "comenta", '#comenta'
+
+          #separator &nbsp
+
+          .votaciones
+            %h2.no-border votaciones
+
+            - votacion_oficial(@iniciativa)
+
+            - votacion_local(@iniciativa)
+
+            %ul.votacion-pleno
+              %li votacion en pleno
+              %li.favor= "#{@iniciativa.official_vote_up} Votos a favor"
+              %li= "#{@iniciativa.official_vote_down} Votos en contra"
+
+            %ul.votaciones-detalles
+              %li= image_tag 'front/vote-meter.png'
+              - @iniciativa.official_votes_printable.each do |official_vote|
+                %li
+                  = official_vote.votes
+                  .barra{:style => "height:#{official_vote.percentage}px;margin-top:#{(64-official_vote.percentage)}px", :class => official_vote.political_party.initials}
+                    &nbsp;
+
+            %ul.votaciones-logos
+              %li Votos a favor
+              - @iniciativa.official_votes_printable.each do |official_vote|
+                %li= image_tag official_vote.political_party.logo.url(:thumb)
+
+      .haz-comentario
+        .comenta-content
+          %a{:name => 'comenta'}
+            %h2 deja tu comentario
+
+          = form_for Comment.new, :url => iniciativa_comments_path(@iniciativa), :method => :post do |form|
+            .form-inputs
+              = form.text_field :author, :placeholder => 'Nombre', :class => 'span3 input-text'
+
+              = form.text_field :email, :placeholder => 'Email', :class => 'span4 input-text margin-left-15'
+
+              = form.text_area :comment, :placeholder => 'Mensaje', :class => 'span7 input-text', 'data-len' => 500
+
+              = form.label 'A favor'
+              = form.radio_button :tendency, 1, :checked => ((params[:voto]!='contra')? 'checked' : '')
+
+              = form.label 'En contra', :class => 'contra'
+              = form.radio_button :tendency, -1, :checked => ((params[:voto]=='contra')? 'checked' : '')
+
+            = hidden_field_tag :other_email
+
+            = submit_tag 'comenta', :class => 'submit span4'
+
+      %article.iniciativa{:class => "#{(@iniciativa.main?)? 'main' :  ''}"}
+        .comments
+          %h4.favor comentarios a favor
+          - @iniciativa.comments.favor.each do |comment|
+            - unless comment.comment.nil?
+              %p.comment
+                %span
+                  = comment.author
+                = comment.comment
+        .comments.push
+          %h4.contra comentarios en contra
+          - @iniciativa.comments.against.each do |comment|
+            - unless comment.comment.nil?
+              %p.comment
+                %span
+                  = comment.author
+                = comment.comment
+
+
+- content_for(:javascript_onload) do
+  - if params[:voted]
+    location.href = '#comenta'
+  $('#presentacion').popover({html : true, placement: 'above'});
+  $('#comision').popover({html : true, placement: 'above'});
+  $('#en_pleno').popover({html : true, placement: 'above'});
+  $('#proyecto').popover({html : true, placement: 'above'});
