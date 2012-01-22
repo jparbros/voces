@@ -1,14 +1,14 @@
 !!! 5
-%html
+%html{:class => params[:controller]}
   %head
-    %title 
+    %title
       131 Voces
       =h yield(:title)
     = stylesheet_link_tag 'front'
     = javascript_include_tag 'application'
     = javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js'
     = csrf_meta_tag
-    
+
 
   %body
     #container
@@ -19,6 +19,7 @@
             %li= link_to 'Iniciativas', iniciativas_path
             %li= link_to 'Congresistas', congresistas_path
             %li= link_to 'Acerca De', acerca_de_path
+            %li= link_to 'Comenta', comenta_path
             %li= link_to 'Contacto', new_contacto_path
 
       %section#main-content
@@ -33,7 +34,7 @@
         $(function(){
         = yield :javascript_onload
         })
-        
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
 var js, fjs = d.getElementsByTagName(s)[0];

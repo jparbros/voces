@@ -34,7 +34,7 @@ html {
       padding: 10px;
 
       a.volver {
-        color: $dark-mulberry;
+        color: $moderate-red;
         text-transform: uppercase;
       }
 
@@ -62,7 +62,7 @@ html {
           width: 735px;
 
           span {
-            @include terminal-font(uppercase, $dark-mulberry, 14px);
+            @include terminal-font(uppercase, $moderate-red, 14px);
 
             &.position {font-size: 13px; font-style: italic;}
           }

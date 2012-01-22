@@ -8,28 +8,33 @@
 //= require jquery_ujs
 //= require bootstrap-alert
 //= require jquery.tokeninput
+//= require formToWizard
 //= require_tree ./admin
 
 $(document).ready(function(){
   $(".alert-message .close").click(function(){
     $(".alert-message").alert('close');
   });
-  
+
   $("#initiative_topic_tokens").tokenInput("/admin/topics.json", {
       theme: "facebook",
       prePopulate: $("#initiative_topic_tokens").data("pre"),
       crossDomain: false
   });
-  
+
   $("#initiative_presented_by_token").tokenInput("/admin/representatives.json", {
       theme: "facebook",
       prePopulate: $("#initiative_presented_by_token").data("pre"),
       crossDomain: false
   });
-  
+
   $("#representative_commission_tokens").tokenInput("/admin/representatives.json", {
       theme: "facebook",
       prePopulate: $("#representative_commission_tokens").data("pre"),
       crossDomain: false
   });
+
+  $('#new_initiative').formToWizard({submitButton: 'sendButtons'});
+  $('p a.next').addClass('btn');
+  $('p a.prev').addClass('btn');
 });
