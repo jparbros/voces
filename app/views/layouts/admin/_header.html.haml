@@ -1,0 +1,13 @@
+%header
+  .topbar
+    .fill
+      .container
+        %h3= link_to '131 Voces', '/admin'
+        %ul
+          %li= link_to 'Iniciativas', admin_initiatives_path
+          %li= link_to 'Temas', admin_topics_path
+          %li= link_to 'Partidos Politicos', admin_political_parties_path
+          %li= link_to 'Representantes', admin_representatives_path
+          %li= link_to 'Comisiones', admin_commissions_path
+          %li= link_to 'Usuarios', admin_admins_path
+          %li= link_to 'CMS', cms_admin_path

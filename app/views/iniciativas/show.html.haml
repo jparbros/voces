@@ -22,6 +22,8 @@
         %article.iniciativa{:class => "#{(@iniciativa.main?)? 'main' :  ''}"}
           .main
             .content
+              .iniciativa_icon
+                = link_to image_tag('front/iniciativa.png'), iniciativa_path(@iniciativa)
               .iniciativa_info
                 %p.info
                   = I18n.localize(@iniciativa.presented_at, :format => :month_year)

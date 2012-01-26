@@ -143,5 +143,12 @@
     img {
       margin-left: 15px;
     }
+
+    .pie-de-banner {
+      @include terminal-font(normal, #000000, 18px);
+      float: right;
+      width: 450px;
+      margin: 10px 0 20px 0;
+    }
   }
 }

@@ -25,6 +25,7 @@ gem 'mime'
 gem 'ruby-gmail', :require => 'gmail'
 gem 'mail'
 gem 'typhoeus'
+gem 'comfortable_mexican_sofa'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'
