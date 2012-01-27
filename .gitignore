@@ -6,3 +6,4 @@ tmp/
 .sass-cache/
 *.dat
 .DS_Store
+.rbenv-version

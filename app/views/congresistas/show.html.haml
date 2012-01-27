@@ -27,12 +27,12 @@
 
       %p
         %span partido politico
-          - if @representante.political_party.logo
-            = image_tag @representante.political_party.logo.url(:thumb)
-          -else
-            = image_tag 'front/image_32.png'
+        -if @representante.political_party && @representante.political_party.logo
+          = image_tag @representante.political_party.logo.url(:thumb)
+        -else
+          = image_tag 'front/image_32.png'
 
-        = @representante.political_party.name
+        = @representante.political_party.name if @representante.political_party
 
       %p
         %span email

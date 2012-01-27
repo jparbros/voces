@@ -1,8 +1,8 @@
 %article.representante
   %ul.datos
     %li
-      - if @representante.political_party.logo
-        = image_tag @representante.political_party.logo.url(:thumb)
+      - if representante.political_party && representante.political_party.logo
+        = image_tag representante.political_party.logo.url(:thumb)
       -else
         = image_tag 'front/image_32.png'
     %li

@@ -39,4 +39,6 @@ gem 'jquery-rails'
 group :development do
   gem 'annotate'
   gem 'ruby-debug19'
+  gem 'heroku'
+  gem 'taps'
 end
