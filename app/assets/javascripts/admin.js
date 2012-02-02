@@ -28,7 +28,7 @@ $(document).ready(function(){
       crossDomain: false
   });
 
-  $("#representative_commission_tokens").tokenInput("/admin/representatives.json", {
+  $("#representative_commission_tokens").tokenInput("/admin/commissions.json", {
       theme: "facebook",
       prePopulate: $("#representative_commission_tokens").data("pre"),
       crossDomain: false
