@@ -73,7 +73,7 @@
   = form.fields_for :official_votes do |official_vote_form|
     .clearfix
       %label
-        = image_tag(official_vote_form.object.political_party.logo.url(:thumb))
+        = image_tag(official_vote_form.object.political_party.logo.url(:thumb)) if official_vote_form.object.political_party
       .input
         = official_vote_form.text_field :votes, :class => 'xxlarge'
         = official_vote_form.hidden_field :political_party_id

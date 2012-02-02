@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126133823) do
+ActiveRecord::Schema.define(:version => 20120202152256) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -252,6 +252,13 @@ ActiveRecord::Schema.define(:version => 20120126133823) do
     t.string   "old_commissions"
     t.integer  "comments_count",     :default => 0
     t.string   "circumscription"
+  end
+
+  create_table "resources", :force => true do |t|
+    t.text     "name"
+    t.text     "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "topics", :force => true do |t|
