@@ -2,18 +2,22 @@
   - if iniciativa.main?
     %h2.estrella La mas vista
   .content
-    %p.info
-      = iniciativa.presented_at.to_s(:month_year)
-      %br
-      Propuesta por:
-      %span
-        = (iniciativa.representative)? link_to(iniciativa.representative.try(:name), congresista_path(iniciativa.representative)) : ''
+    .iniciativa_icon
+      = link_to image_tag('front/iniciativa.png'), iniciativa_path(iniciativa)
+    .iniciativa_info
+      %p.info
+        %span.date
+          = I18n.localize(iniciativa.presented_at, :format => :month_year)
+        %br
+        Propuesta por:
+        %span
+          = (iniciativa.representative)? link_to(iniciativa.representative.try(:name), congresista_path(iniciativa.representative)) : ''
 
-    %p.description
-      - if show
-        = iniciativa.description
-      - else
-        = link_to iniciativa.description, iniciativa_path(iniciativa)
+      %p.description
+        - if show
+          = iniciativa.description
+        - else
+          = link_to iniciativa.description, iniciativa_path(iniciativa)
 
     - temas(iniciativa)
 
