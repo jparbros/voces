@@ -51,6 +51,21 @@
       = form.select :state, Initiative::STATES.to_a.each {|t| t.reverse!}
 
 %fieldset
+  %legend Recursos Adicionales
+
+= form.fields_for :resources do |resource_form|
+  .clearfix
+    = resource_form.label :nombre
+    .input
+      = resource_form.text_field :name
+
+  .clearfix
+    = resource_form.label :url
+    .input
+      = resource_form.text_field :url
+
+
+%fieldset
   %legend Votaciones Generales
 
   .clearfix

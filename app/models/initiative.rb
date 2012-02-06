@@ -6,6 +6,7 @@ class Initiative < ActiveRecord::Base
   has_and_belongs_to_many :commissions
   has_many :votes
   has_many :official_votes
+  has_many :resources, :as => :resoursable, :dependent => :destroy
   has_and_belongs_to_many :topics
   belongs_to :representative
   belongs_to :political_party
@@ -14,6 +15,7 @@ class Initiative < ActiveRecord::Base
   # Nested Attributes
   #
   accepts_nested_attributes_for :official_votes
+  accepts_nested_attributes_for :resources
 
   #
   # Attributes
@@ -178,7 +180,7 @@ class Initiative < ActiveRecord::Base
   def projected?
     self.state == 'project'
   end
-  
+
   def official_votes_printable
     official_votes.where('votes > 0')
   end

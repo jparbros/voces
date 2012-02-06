@@ -51,7 +51,8 @@
 
               %ul.recursos
                 %li recursos adicionales
-                %li= link_to 'gaceta parlamentaria', @iniciativa.additional_resources
+                - @iniciativa.resources.each do |resource|
+                  %li= link_to resource.name, resource.url
 
             .aside
               %ul
