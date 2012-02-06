@@ -5,12 +5,12 @@
     %h2
       twitter
     .tweet
-    
+
 
 .comenta-content
   %article
     %h2 deja tu comentario
-  
+
     = form_for @comentario, :url => '/comenta', :method => :post do |form|
       .form-inputs
         = form.text_field :author, :placeholder => 'Nombre', :class => 'span3 input-text'
@@ -20,7 +20,7 @@
         = form.text_area :comment, :placeholder => 'Mensaje', :class => 'span7 input-text', 'data-len' => 500
 
       = hidden_field_tag :other_email
-  
+
       = submit_tag 'comenta', :class => 'submit span4'
 
   %h2 todos los mensajes
@@ -30,7 +30,7 @@
 <script>
 jQuery(function($){
 $(".tweet").tweet({
-username: "curul501",
+username: "131voces",
 count: 10,
 loading_text: "cargando tweets...",
 template: "{text}"
