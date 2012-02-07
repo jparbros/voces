@@ -1,0 +1,4 @@
+%tr
+  %td= region.name
+  %td= link_to 'Editar', edit_admin_region_path(region)
+  %td= link_to 'Borrar', admin_region_path(region), :method => :delete, :confirm => '¿Esta seguro que desea eliminar la circunscripción?'
