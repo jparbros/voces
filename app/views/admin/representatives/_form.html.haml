@@ -7,33 +7,17 @@
   = form.label :posicion
   .input
     = form.text_field :position, :class => 'xxlarge'
-    
-.clearfix
-  = form.label :distrito
-  .input
-    = form.text_field :district, :class => 'xxlarge'
 
 .clearfix
   = form.label :circunscripcion
   .input
-    = form.text_field :circumscription, :class => 'xxlarge'
-    
-    
-.clearfix
-  = form.label :region
-  .input
     = form.select :region_id, @regions, { :include_blank => true }
-    
-.clearfix
-  = form.label :provincia
-  .input
-    = form.select :province_id, @provinces, { :include_blank => true}
-    
+
 .clearfix
   = form.label :partido_politico
   .input
     = form.select :political_party_id, @political_parties, { :include_blank => true}
-    
+
 .clearfix
   = form.label :email
   .input
@@ -50,11 +34,6 @@
     = form.text_field :substitute, :class => 'xxlarge'
 
 .clearfix
-  = form.label :tipo_de_eleccion
-  .input
-    = form.text_field :election_type, :class => 'xxlarge'
-
-.clearfix
   = form.label :comisiones
   .input
     = form.text_field :commission_tokens, "data-pre" => @representative.commissions.map(&:attributes).to_json
@@ -64,17 +43,17 @@
   .input
     = form.file_field :avatar, :class => 'xxlarge'
     = form.hidden_field :avatar_cache
-    
+
 .clearfix
   = form.label :biografia
   .input
     = form.text_area :biography, :class => 'xxlarge'
-    
+
 .clearfix
   = form.label :fecha_de_nacimiento
   .input
     = form.text_field :birthday, :class => 'xxlarge'
-    
+
 .clearfix
   = form.label :twitter
   .input
