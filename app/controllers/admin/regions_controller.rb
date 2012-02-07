@@ -15,7 +15,7 @@ class Admin::RegionsController < Admin::BaseController
   def create
     @region = Region.new(params[:region])
     if @region.save
-      redirect_to admin_regions_url, :notice => "Circunscripción creada exitosamente"
+      redirect_to admin_regions_url, :notice => "Circunscripcion creada exitosamente"
     else
       render :new
     end
@@ -24,7 +24,7 @@ class Admin::RegionsController < Admin::BaseController
   def update
     @region = PoliticalParty.find(params[:id])
     if @region.update_attributes(params[:region])
-      redirect_to admin_regions_url, :notice => "Circunscripción editada exitosamente"
+      redirect_to admin_regions_url, :notice => "Circunscripcion editada exitosamente"
     else
       render :edit
     end
