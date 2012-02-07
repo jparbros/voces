@@ -61,6 +61,6 @@
       %br
       = text_field_tag :title_or_description_contains
       .input
-        = label_tag 'circunscripción electoral'
+        = label_tag 'circunscripci&ocute;n electoral'
         %br
         = select_tag :representative_region_name_contains, options_for_select(Region.all.collect {|region| [region.name, region.id]}), :include_blank => true
