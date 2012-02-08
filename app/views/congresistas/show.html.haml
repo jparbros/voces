@@ -26,7 +26,7 @@
         %span.nombre= @representante.name
 
       %p
-        %span partido politico
+        %span Grupo Parlamentario
         -if @representante.political_party && @representante.political_party.logo
           = image_tag @representante.political_party.logo.url(:thumb)
         -else

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Initiative < ActiveRecord::Base
   #
   # Associations
@@ -26,6 +27,7 @@ class Initiative < ActiveRecord::Base
   # Scope
   #
   scope :main, where(:main => true)
+  default_scope order('cast(number as int) ASC')
 
   #
   # Pagination
@@ -36,42 +38,20 @@ class Initiative < ActiveRecord::Base
   # States
   #
   STATES = {
-    :new => 'nueva',
-    :presentation => 'presentacion',
-    :commission => 'en comision',
-    :plenary => 'en pleno',
-    :project => 'proyecto',
-    :rejected_by_commission => 'desechada en comision',
-    :rejected_by_board => 'desechada por la mesa directiva'
+    :commission => 'En comisión',
+    :dictum => 'Dictamen',
+    :debate_in_plenary => 'Debate en Pleno',
+    :promulgation_and_enforcement => 'Promulgación y vigencia'
   }
 
   #
   # States Machine
   #
-  state_machine :state, :initial => :new do
-    state :new
-    state :presentation
+  state_machine :state, :initial => :commission do
     state :commission
-    state :plenary
-    state :project
-    state :rejected_by_commission
-    state :rejected_by_board
-
-    event :in_presentation do
-      transition :to => :presentation, :from => :any
-    end
-
-    event :in_commission do
-      transition :to => :commission, :from => :any
-    end
-
-    event :in_plenary do
-      transition :to => :plenary, :from => :any
-    end
-
-    event :in_project do
-      transition :to => :project, :from => :any
-    end
+    state :dictum
+    state :debate_in_plenary
+    state :promulgation_and_enforcement
   end
 
   def topic_tokens=(ids)
@@ -166,19 +146,19 @@ class Initiative < ActiveRecord::Base
   end
 
   def presented?
-    self.state != 'new'
+    true
   end
 
   def commissioned?
-    self.state == 'commission' || self.state == 'plenary' || self.state == 'project' || self.state == 'rejected_by_commission'
+    self.state != 'commission'
   end
 
   def plenaried?
-    self.state == 'plenary' || self.state == 'project'
+    self.state == 'promulgation_and_enforcement' || self.state == 'debate_in_plenary'
   end
 
   def projected?
-    self.state == 'project'
+     self.state == 'promulgation_and_enforcement'
   end
 
   def official_votes_printable
