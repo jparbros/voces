@@ -2,7 +2,10 @@
   .main-banner
     = image_tag 'front/main-banner.png'
     .pie-de-banner
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+      %P
+        CONOCE A TUS CONGRESISTAS Y PARTICIPA EN LA
+      %p
+        CREACIÓN DE MEJORES LEYES EN BENEFICIO DE TODOS.
 
   %aside
     %h2 la propuesta mas vista
@@ -61,6 +64,7 @@
       %br
       = text_field_tag :title_or_description_contains
       .input
-        = label_tag 'circunscripci&ocute;n electoral'
+        %label
+          circunscripci&oacute;n electoral
         %br
         = select_tag :representative_region_name_contains, options_for_select(Region.all.collect {|region| [region.name, region.id]}), :include_blank => true
