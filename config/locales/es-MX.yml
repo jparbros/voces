@@ -1,7 +1,7 @@
 es-MX:
   time:
     formats:
-      month_year: "%B de %Y"
+      month_year: "%d de %B de %Y"
   views:
     pagination:
       previous: "&laquo; Prev"

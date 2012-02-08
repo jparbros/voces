@@ -10,11 +10,11 @@
   %aside
     %h2 la propuesta mas vista
     %p.info
-      = @iniciativa.presented_at.to_s(:month_year)
+      = I18n.localize(@iniciativa.presented_at, :format => :month_year)
       %br
       Propuesta por:
       %span
-        = @iniciativa.presented_by
+        = (@iniciativa.representative)? link_to(@iniciativa.representative.try(:name), congresista_path(@iniciativa.representative)) : ''
 
     %p.description
       = @iniciativa.description
@@ -38,7 +38,7 @@
     %ul.info
       %li
         estado de la iniciativa
-        %span= @iniciativa.state
+        %span= @iniciativa.state_formated
       %li
         votacion oficial
         %span
