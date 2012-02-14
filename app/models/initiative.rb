@@ -27,6 +27,7 @@ class Initiative < ActiveRecord::Base
   # Scope
   #
   scope :main, where(:main => true)
+  scope :most_commented, order('comments_count DESC').limit(1)
   default_scope order('cast(number as int) ASC')
 
   #
@@ -59,7 +60,8 @@ class Initiative < ActiveRecord::Base
   end
 
   def presented_by_token=(id)
-    self.representative_id = id
+    representante = Representative.find(id)
+    self.representative = representante
   end
 
   def official_percentage_up
@@ -141,8 +143,7 @@ class Initiative < ActiveRecord::Base
   end
 
   def self.to_home
-    initiative =  self.order('RANDOM()').limit(5)
-    return self.main.first ? [self.main.first, initiative.first] : [initiative.first, initiative.last]
+    return self.main.first ? self.main.first : self.most_commented.first
   end
 
   def presented?

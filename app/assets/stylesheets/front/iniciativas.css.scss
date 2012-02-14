@@ -355,7 +355,7 @@ article {
           }
 
           &.comenta {
-             background: url("/assets/front/comenta-bg.png") no-repeat 45px 13px $moderate-red;
+             background: $moderate-red;
           }
 
           a {
@@ -526,7 +526,7 @@ article {
           }
 
           &.comenta {
-            background: url("/assets/front/comenta-bg.png") no-repeat scroll 3px 10px $moderate-red;
+            background: $moderate-red;
             height: 35px;
             padding-top: 5px;
           }

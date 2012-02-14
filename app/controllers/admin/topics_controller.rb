@@ -1,7 +1,7 @@
 class Admin::TopicsController < Admin::BaseController
   def index
     @topics = if params[:q]
-      Topic.where("name like ?", "%#{params[:q]}%")
+      Topic.where("name iLIKE ?", "%#{params[:q]}%")
     else
       Topic.page(params[:page])
     end
@@ -10,15 +10,15 @@ class Admin::TopicsController < Admin::BaseController
       format.json { render :json => @topics.map(&:attributes) }
     end
   end
-  
+
   def show
     @topic = Topic.find(params[:id])
   end
-  
+
   def new
     @topic = Topic.new
   end
-  
+
   def create
     @topic = Topic.new(params[:topic])
     if @topic.save
@@ -27,7 +27,7 @@ class Admin::TopicsController < Admin::BaseController
       render :new
     end
   end
-  
+
   def update
     @topic = Topic.find(params[:id])
     if @topic.update_attributes(params[:topic])
@@ -36,11 +36,11 @@ class Admin::TopicsController < Admin::BaseController
       render :edit
     end
   end
-  
+
   def edit
     @topic = Topic.find(params[:id])
   end
-  
+
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy

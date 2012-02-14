@@ -8,7 +8,11 @@
         CREACIÓN DE MEJORES LEYES EN BENEFICIO DE TODOS.
 
   %aside
-    %h2 la propuesta mas vista
+    %h2
+      - if @iniciativa.main
+        la propuesta destacada
+      - else
+        la propuesta mas vista
     %p.info
       = I18n.localize(@iniciativa.presented_at, :format => :month_year)
       %br
@@ -37,7 +41,7 @@
 
     %ul.info
       %li
-        estado de la iniciativa
+        estado del proyecto de ley
         %span= @iniciativa.state_formated
       %li
         votacion oficial
@@ -68,3 +72,4 @@
           circunscripci&oacute;n electoral
         %br
         = select_tag 'search[state]', options_for_select(Region.all.collect {|region| [region.name, region.id]}), :include_blank => true
+      = submit_tag :buscar, :class => :button

@@ -1,4 +1,4 @@
-%h1 integrantes de la camara
+%h1 congresistas de la republica
 
 %aside
   %h2
@@ -47,10 +47,6 @@
         = "#{@representante.twitter || 'no disponible'}"
 
       %p
-        %span suplente
-        = @representante.substitute
-
-      %p
         %span fecha de nacimiento
         = @representante.birthday
 
@@ -60,7 +56,7 @@
           = link_to commision.name + ',', comisione_path(commision)
 
       %p
-        %span biografia
+        %span resumen de trayectoria
         = @representante.biography
 
 

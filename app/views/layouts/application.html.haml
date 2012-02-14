@@ -16,7 +16,7 @@
         = link_to image_tag('front/logo.png'), root_path
         %nav
           %ul
-            %li= link_to 'Iniciativas', iniciativas_path
+            %li= link_to 'Proyectos de ley', iniciativas_path
             %li= link_to 'Congresistas', congresistas_path
             %li= link_to 'Acerca De', cms_html_path('acerca-de')
             %li= link_to 'Comenta', comenta_path
@@ -26,9 +26,9 @@
         = yield
       %footer
         %ul
-          %li ligas de interes
-          %li preguntas frecuentes
-          %li mapa del sitio
+          - Cms::Site.first.pages.for_category('Footer').published.each do |page|
+            %li= link_to page.label, page.full_path
+
       = yield :modals
       %script{:type => 'text/javascript'}
         $(function(){

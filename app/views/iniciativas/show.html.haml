@@ -1,5 +1,5 @@
 #iniciativas
-  %h1 iniciativas
+  %h1 proyectos de ley
   .content
     %aside
       %h2
@@ -87,27 +87,17 @@
           .votaciones
             %h2.no-border votaciones
 
-            - votacion_oficial(@iniciativa)
-
             - votacion_local(@iniciativa)
+
+            - votacion_oficial(@iniciativa)
 
             %ul.votacion-pleno
               %li votacion en pleno
               %li.favor= "#{@iniciativa.official_vote_up} Votos a favor"
-              %li= "#{@iniciativa.official_vote_down} Votos en contra"
+              %li.favor= "#{@iniciativa.official_vote_down} Votos en contra"
+              %li= "#{@iniciativa.official_vote_abstentions || 0} Abstenciones"
 
-            %ul.votaciones-detalles
-              %li= image_tag 'front/vote-meter.png'
-              - @iniciativa.official_votes_printable.each do |official_vote|
-                %li
-                  = official_vote.votes
-                  .barra{:style => "height:#{official_vote.percentage}px;margin-top:#{(64-official_vote.percentage)}px", :class => official_vote.political_party.initials}
-                    &nbsp;
 
-            %ul.votaciones-logos
-              %li Votos a favor
-              - @iniciativa.official_votes_printable.each do |official_vote|
-                %li= image_tag official_vote.political_party.logo.url(:thumb)
 
       .haz-comentario
         .comenta-content
@@ -122,34 +112,22 @@
 
               = form.text_area :comment, :placeholder => 'Mensaje', :class => 'span7 input-text', 'data-len' => 500
 
-              = form.label 'A favor'
-              = form.radio_button :tendency, 1, :checked => ((params[:voto]!='contra')? 'checked' : '')
-
-              = form.label 'En contra', :class => 'contra'
-              = form.radio_button :tendency, -1, :checked => ((params[:voto]=='contra')? 'checked' : '')
+              Solo se permite votar una vez por cada proyecto de ley.
 
             = hidden_field_tag :other_email
 
             = submit_tag 'comenta', :class => 'submit span4'
 
       %article.iniciativa{:class => "#{(@iniciativa.main?)? 'main' :  ''}"}
-        .comments
-          %h4.favor comentarios a favor
-          - @iniciativa.comments.favor.each do |comment|
-            - unless comment.comment.nil?
-              %p.comment
-                %span
-                  = comment.author
-                = comment.comment
-        .comments.push
-          %h4.contra comentarios en contra
-          - @iniciativa.comments.against.each do |comment|
-            - unless comment.comment.nil?
-              %p.comment
-                %span
-                  = comment.author
-                = comment.comment
+        %h3 comentarios
 
+        - @iniciativa.comments.each do |comment|
+          %p.comment
+            %span
+              = comment.author
+              |
+              = I18n.localize(comment.created_at, :format => :month_year)
+            = comment.comment
 
 - content_for(:javascript_onload) do
   - if params[:voted]
