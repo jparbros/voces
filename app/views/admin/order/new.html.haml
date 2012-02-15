@@ -1,0 +1,6 @@
+.page-header
+  %h2 Ordenar Iniciativas
+
+%ul{:id => 'initiatives_order', 'data-url' => admin_order_path, 'data-authenticity-token' => form_authenticity_token}
+  - @initiatives.each do |initiative|
+    %li.block-message.alert-message{:id => "initiatives_#{initiative.id}"}= "#{initiative.number} - #{initiative.title}"

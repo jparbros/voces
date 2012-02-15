@@ -13,6 +13,7 @@ class RepresentativeSearch
       find_by_state conditions[:state] if conditions[:state] && !conditions[:state].blank?
       find_by_political_party conditions[:political_party] if conditions[:political_party] && !conditions[:political_party].blank?
       find_by_commision(conditions[:commision]) if conditions[:commision]
+      find_by_initial(conditions[:initial]) if conditions[:initial]
     end
     @representative_search.page(current_page)
   end
@@ -20,11 +21,11 @@ class RepresentativeSearch
   private
 
   def find_by_name(name)
-    @representative_search = @representative_search.where('representatives.name iLIKE ?',"%#{name}%") if name
+    @representative_search = @representative_search.where('representatives.first_name iLIKE ? and representatives.last_name iLIKE ?',"%#{name}%","%#{name}%") if name
   end
 
-  def find_by_initial(name)
-    @representative_search = @representative_search.where('representatives.name iLIKE ?',"%#{name}%") if name
+  def find_by_initial(initial)
+    @representative_search = @representative_search.where('representatives.last_name iLIKE ?',"#{initial}%") if initial
   end
 
   def find_by_state state

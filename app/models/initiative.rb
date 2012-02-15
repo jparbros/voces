@@ -28,7 +28,7 @@ class Initiative < ActiveRecord::Base
   #
   scope :main, where(:main => true)
   scope :most_commented, order('comments_count DESC').limit(1)
-  default_scope order('cast(number as int) ASC')
+  default_scope order('position ASC')
 
   #
   # Pagination
@@ -53,6 +53,14 @@ class Initiative < ActiveRecord::Base
     state :dictum
     state :debate_in_plenary
     state :promulgation_and_enforcement
+  end
+
+
+  def self.update_sort(initiatives)
+    initiatives.each_with_index do |initiative_id, index|
+      initiative = self.find(initiative_id)
+      initiative.update_attribute :position, index
+    end
   end
 
   def topic_tokens=(ids)

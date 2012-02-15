@@ -16,6 +16,20 @@ html {
       margin-right:0;
       width: 660px;
 
+
+      ul.iniciales {
+        margin: 10px 0 0 0;
+
+        li {
+          display: inline;
+          margin: 0 14px 0 0;
+
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+
       .comment {
         margin-bottom: 10px;
         border-bottom: 1px solid $grey-2;

@@ -6,6 +6,9 @@
 
 %section
   %article
+    %ul.iniciales
+      - ('A'..'Z').to_a.each do |initial|
+        %li= link_to initial, search_representative_path(:search => {:initial => initial})
     %h2 integrantes m&aacute;s comentados
 
   = render :partial => 'representante', :collection => @representantes

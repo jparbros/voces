@@ -5,6 +5,7 @@ Congresspedia::Application.routes.draw do
     resources :initiatives do
       resource :main, :controller => :main, :only => [:create]
     end
+    resource :order, :controller => :order, :only => [:new, :create]
     resources :topics
     resources :political_parties
     resources :representatives

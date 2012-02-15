@@ -34,7 +34,19 @@ $(document).ready(function(){
       crossDomain: false
   });
 
-  $('#new_initiative').formToWizard({submitButton: 'sendButtons'});
-  $('p a.next').addClass('btn');
-  $('p a.prev').addClass('btn');
+  $('#initiatives_order').sortable({
+    type: 'post',
+    update: function(){
+      var url = $('#initiatives_order').data('url');
+      var authenticity_token = $('#initiatives_order').data('authenticity-token');
+      $.ajax({async:true,
+        type: 'post',
+        complete:function(request){
+          $("#initiatives_order").effect("highlight") },
+          data:$("#initiatives_order").sortable('serialize') + '&authenticity_token=' + encodeURIComponent(authenticity_token),
+          dataType:'script',
+          url: url})
+      }
+  });
+  $("#initiatives_order").disableSelection();
 });

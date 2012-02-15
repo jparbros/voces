@@ -1,7 +1,12 @@
 .clearfix
   = form.label :nombre
   .input
-    = form.text_field :name, :class => 'xxlarge'
+    = form.text_field :first_name, :class => 'xxlarge'
+
+.clearfix
+  = form.label :apellidos
+  .input
+    = form.text_field :last_name, :class => 'xxlarge'
 
 .clearfix
   = form.label :posicion
@@ -27,11 +32,6 @@
   = form.label :telefono
   .input
     = form.text_field :phone, :class => 'xxlarge'
-
-.clearfix
-  = form.label :substituto
-  .input
-    = form.text_field :substitute, :class => 'xxlarge'
 
 .clearfix
   = form.label :comisiones
@@ -60,6 +60,6 @@
     = form.text_field :twitter, :class => 'xxlarge'
 
 .clearfix
-  = form.label :facebook
+  = form.label :numero_de_votos
   .input
-    = form.text_field :facebook, :class => 'xxlarge'
+    = form.number_field :number_votes, :class => 'xxlarge'
