@@ -28,6 +28,10 @@
         %ul
           - Cms::Site.first.pages.for_category('Footer').published.each do |page|
             %li= link_to page.label, page.full_path
+        %ul
+          %li
+            Powered by
+            = image_tag 'http://curul501.org/assets/front/logo.png'
 
       = yield :modals
       %script{:type => 'text/javascript'}
