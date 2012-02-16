@@ -7,7 +7,7 @@ class Admin::RepresentativesController < Admin::BaseController
       end
     respond_to do |format|
       format.html
-      format.json { render :json => @representatives.map(&:attributes) }
+      format.json { render :json => @representatives }
     end
   end
 

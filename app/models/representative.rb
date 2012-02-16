@@ -14,6 +14,7 @@ class Representative < ActiveRecord::Base
   # Accessor
   #
   attr_reader :commission_tokens
+  attr_accessor :name
 
   #
   # Uploader
@@ -34,6 +35,10 @@ class Representative < ActiveRecord::Base
 
   def commission_tokens=(ids)
     self.commission_ids = ids.split(',')
+  end
+
+  def as_json(options)
+    super(options.merge({:methods => :name}))
   end
 
   def name
