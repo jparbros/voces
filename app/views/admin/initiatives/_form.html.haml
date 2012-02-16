@@ -28,7 +28,7 @@
   .clearfix
     = form.label :presentado_por
     .input
-      = form.text_field :presented_by_token, "data-pre" => [{:id => @initiative.representative.try(:id), :name => @initiative.representative.name}].to_json
+      = form.text_field :presented_by_token, "data-pre" => [{:id => @initiative.representative.try(:id), :name => @initiative.representative.try(:name)}].to_json
 
   .clearfix
     = form.label :temas
