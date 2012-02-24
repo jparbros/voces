@@ -63,3 +63,24 @@
   = form.label :numero_de_votos
   .input
     = form.number_field :number_votes, :class => 'xxlarge'
+
+.clearfix
+  = form.label :temas
+  .input
+    = form.text_field :topic_tokens, "data-pre" => @representative.topics.map(&:attributes).to_json
+
+
+%fieldset
+  %legend Acciones de representaci&oacute;n
+
+= form.fields_for :representation_actions do |representation_action_form|
+
+  .clearfix
+    = representation_action_form.label :name
+    .input
+      = representation_action_form.text_field :name, :class => 'xxlarge'
+
+  .clearfix
+    = representation_action_form.label :url
+    .input
+      = representation_action_form.text_field :url, :class => 'xxlarge'

@@ -34,6 +34,12 @@ $(document).ready(function(){
       crossDomain: false
   });
 
+  $("#representative_topic_tokens").tokenInput("/admin/topics.json", {
+      theme: "facebook",
+      prePopulate: $("#representative_topic_tokens").data("pre"),
+      crossDomain: false
+  });
+
   $('#initiatives_order').sortable({
     type: 'post',
     update: function(){

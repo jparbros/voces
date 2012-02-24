@@ -239,6 +239,28 @@ html {
 
     aside {
       min-height: 0;
+
+      .representacion {
+        margin-left: 20px;
+        margin-right: 10px;
+        min-height: 300px;
+
+        li {
+          border-bottom: 1px solid $dark-grey;
+          margin: 10px 0;
+          padding: 0 0 5px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+
+      .temas {
+        margin-left: 20px;
+        margin-right: 10px;
+        min-height: 100px;
+      }
     }
 
     p {

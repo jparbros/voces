@@ -2,9 +2,18 @@
 
 %aside
   %h2
-    Twitter
-  .tweet
-    = "No disponible" unless @representante.twitter
+    Representaci&oacute;n
+  %ul.representacion
+    - @representante.representation_actions.each do |representation_action|
+      %li
+        = link_to representation_action.name, representation_action.url, :target => '_blank'
+
+  %h2
+    Temas de interes de #{@representante.name}
+  %ul.temas
+    - @representante.topics.each do |topic|
+      %li
+        = topic.name
 
 .congresista_content
   %article

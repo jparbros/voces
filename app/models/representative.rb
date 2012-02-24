@@ -7,13 +7,20 @@ class Representative < ActiveRecord::Base
   belongs_to :province
   belongs_to :political_party
   has_and_belongs_to_many :commissions
+  has_and_belongs_to_many :topics
   has_many :initiatives
   has_many :comments, :as => :commentable, :dependent => :destroy
+  has_many :representation_actions
+
+  #
+  # Nested attributes
+  #
+  accepts_nested_attributes_for :representation_actions
 
   #
   # Accessor
   #
-  attr_reader :commission_tokens
+  attr_reader :commission_tokens, :topic_tokens
   attr_accessor :name
 
   #
@@ -35,6 +42,10 @@ class Representative < ActiveRecord::Base
 
   def commission_tokens=(ids)
     self.commission_ids = ids.split(',')
+  end
+
+  def topic_tokens=(ids)
+    self.topic_ids = ids.split(',')
   end
 
   def as_json(options)

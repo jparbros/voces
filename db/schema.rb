@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215150718) do
+ActiveRecord::Schema.define(:version => 20120223151059) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -240,6 +240,14 @@ ActiveRecord::Schema.define(:version => 20120215150718) do
     t.datetime "updated_at"
   end
 
+  create_table "representation_actions", :force => true do |t|
+    t.text     "name"
+    t.text     "url"
+    t.integer  "representative_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "representatives", :force => true do |t|
     t.string   "first_name"
     t.string   "position"
@@ -263,6 +271,11 @@ ActiveRecord::Schema.define(:version => 20120215150718) do
     t.string   "circumscription"
     t.string   "last_name"
     t.integer  "number_votes"
+  end
+
+  create_table "representatives_topics", :id => false, :force => true do |t|
+    t.integer "representative_id"
+    t.integer "topic_id"
   end
 
   create_table "resources", :force => true do |t|

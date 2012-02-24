@@ -13,6 +13,7 @@ class Admin::RepresentativesController < Admin::BaseController
 
   def new
     @representative = Representative.new
+    @representative.representation_actions.build
     @regions = Region.all.collect {|state| [state.name, state.id]}
     @provinces = []
     @political_parties = PoliticalParty.all.collect {|political_party| [political_party.name, political_party.id]}
@@ -29,6 +30,7 @@ class Admin::RepresentativesController < Admin::BaseController
 
   def edit
     @representative = Representative.find(params[:id])
+    @representative.representation_actions.build
     @regions = Region.all.collect {|state| [state.name, state.id]}
     @provinces = []
     @political_parties = PoliticalParty.all.collect {|political_party| [political_party.name, political_party.id]}
