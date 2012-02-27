@@ -17,6 +17,8 @@ a {
   @include terminal-font(normal, $dark-grey, 14px);
 }
 
+.error { border: 1px solid red !important;}
+
 #container {
   @include column(24,true);
   float:none;
@@ -33,17 +35,17 @@ h1 {
 
 h2 {
   @include terminal-font(light, $moderate-red, 18px);
-  border-bottom: 1px solid $grey; 
+  border-bottom: 1px solid $grey;
   margin: 20px 10px 10px 20px;
   padding: 0 0 5px;
-  
+
   &.estrella {
     @include terminal-font(semi-bold, $dark-grey, 18px);
     background: url('/assets/front/star-blue.png') no-repeat;
     border-bottom: 1px solid $grey;
     padding-left: 30px;
   }
-  
+
   article & {
     margin: 20px 10px 10px 0px;
   }
@@ -124,20 +126,20 @@ aside {
   background-color: $white;
   padding-bottom: 10px;
   min-height: 600px;
-  
+
   .input {
     @extend .input-text;
     margin-bottom: 10px;
     width: 190px;
   }
-  
+
   .button {
     @extend .submit-button;
     color: $white;
     margin: 5px 0 0 20px;
     width: 200px;
   }
-  
+
   ul {
     &.ul-aside {
       @include terminal-font(normal, $dark-grey, 14px);
@@ -148,7 +150,7 @@ aside {
       }
     }
   }
-  
+
   textarea { height: 100px !important; }
 }
 
@@ -170,7 +172,7 @@ article {
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
   opacity: 0;
-  
+
   .in{opacity: 1;}
 }
 
@@ -178,7 +180,7 @@ article {
   @include arial-font($dark-grey, 10px, none);
   margin: 0 0 100px 20px;
   width: 200px;
-  
+
   ul {
     li {
       border-bottom: 1px solid $grey-2;

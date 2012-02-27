@@ -23,8 +23,30 @@ $(document).ready(function(){
     nextBtn: '<span class="button-down">&nbsp;</span>',
     prevBtn: '<span class="button-up">&nbsp;</span>'
   });
-  
+
   $('#comment_comment').keyup(function(){
-   $('#comment_comment').trimTxt(); 
+   $('#comment_comment').trimTxt();
+  });
+
+  $('input.submit').click(function(event) {
+    event.preventDefault();
+
+    var comment_author = $('form#new_comment input#comment_author');
+    var comment_email = $('form#new_comment input#comment_email');
+    var comment_comment = $('form#new_comment #comment_comment');
+
+    if (comment_author.val() == "")
+      comment_author.addClass('error');
+
+    if (comment_email.val() == "")
+      comment_email.addClass('error');
+
+    if (comment_comment.val() == "")
+      comment_comment.addClass('error');
+
+    if ((comment_author.val() != "") && (comment_email.val() != "") && (comment_comment.val() != ""))
+      $(this).parent().submit();
+
   });
 });
+
