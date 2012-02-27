@@ -38,6 +38,11 @@ class Admin::RepresentativesController < Admin::BaseController
 
   def update
     @representative = Representative.find(params[:id])
+    params[:representative][:representation_actions_attributes]
+
+    params[:representative][:representation_actions_attributes].keys.each do |key|
+      params[:representative][:representation_actions_attributes].delete(key) if params[:representative][:representation_actions_attributes][key][:name].blank? || params[:representative][:representation_actions_attributes][key][:url].blank?
+    end
     if @representative.update_attributes(params[:representative])
       redirect_to admin_representatives_url, :notice => "Representante editado exitosamente"
     else
