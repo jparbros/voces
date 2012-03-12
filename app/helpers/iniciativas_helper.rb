@@ -9,7 +9,7 @@ module IniciativasHelper
 
   def estado_de_iniciativa(iniciativa)
     list = []
-    list << content_tag(:li, 'estado de la iniciativa')
+    list << content_tag(:li, 'Etapa del proyecto')
     list << content_tag(:li, 'En comisión', :id => "presentacion_#{iniciativa.id}", :class => iniciativa.presented? ? 'presentation' : '')
     list << content_tag(:li, 'Dictamen', :id => "comision_#{iniciativa.id}", :class => iniciativa.commissioned? ? 'commission' : '')
     list << content_tag(:li, 'Debate en Pleno', :id => "en_pleno_#{iniciativa.id}", :class => iniciativa.plenaried? ? 'plenary' : '')
@@ -19,24 +19,24 @@ module IniciativasHelper
 
   def votacion_oficial(iniciativa)
     list = []
-    list << content_tag(:li, 'votacion oficial')
+    list << content_tag(:li, 'Votacion oficial')
     if iniciativa.official_voted?
-      list << content_tag(:li, "a favor: #{iniciativa.official_percentage_up}%", :style => "width:#{iniciativa.official_pixel_votes_up}px", :class => 'a-favor')
-      list << content_tag(:li, "en contra #{iniciativa.official_percentage_down}%", :style => "width:#{iniciativa.official_pixel_votes_down}px", :class => 'en-contra')
+      list << content_tag(:li, "A favor: #{iniciativa.official_percentage_up}%", :style => "width:#{iniciativa.official_pixel_votes_up}px", :class => 'a-favor')
+      list << content_tag(:li, "En contra #{iniciativa.official_percentage_down}%", :style => "width:#{iniciativa.official_pixel_votes_down}px", :class => 'en-contra')
     else
-      list << content_tag(:li, 'iniciativa no votada', :class => 'no-votada')
+      list << content_tag(:li, 'Proyecto no votado', :class => 'no-votada')
     end
     concat raw(content_tag(:ul, raw(list.join('')), :class => 'votacion-oficial'))
   end
 
   def votacion_local(iniciativa)
     list = []
-    list << content_tag(:li, 'votacion en 131 Voces')
+    list << content_tag(:li, 'Votacion en 131 Voces')
     list << content_tag(:li, :style => "#{(iniciativa.voted?)? "width:#{iniciativa.pixel_votes_up}px" : '' }", :class => "#{(iniciativa.voted?)? 'a-favor' : 'no-votada'}") do
-      "a favor: #{iniciativa.percentage_votes_up}%"
+      "A favor: #{iniciativa.percentage_votes_up}%"
     end
     list << content_tag(:li, :style => "#{(iniciativa.voted?)? "width:#{iniciativa.pixel_votes_down}px" : '' }", :class => "#{(iniciativa.voted?)? 'en-contra' : 'no-votada'}") do
-      "en contra #{iniciativa.percentage_votes_down}%"
+      "En contra #{iniciativa.percentage_votes_down}%"
     end
     concat raw(content_tag(:ul, raw(list.join('')), :class => 'votacion-local'))
   end

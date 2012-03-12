@@ -6,16 +6,16 @@
 
   %aside
     %h2
-      buscar iniciativa
+      Buscar proyectos de ley
 
     = form_tag search_initiatives_path, :method => :post do |form|
 
       = text_field_tag 'search[keywords]', '', :placeholder => 'palabras clave', :class => 'input'
 
-      = submit_tag :buscar, :class => 'button'
+      = submit_tag 'Buscar', :class => 'button'
 
     %h2
-      temas
+      Temas
 
     %ul.ul-aside
       - @temas.each do |tema|

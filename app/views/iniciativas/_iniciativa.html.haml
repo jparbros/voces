@@ -31,9 +31,9 @@
     %ul
       %a{:href => iniciativa_path(iniciativa)}
         %li.comenta
-          vota
+          Vota
           %br
-          comenta
+          Comenta
       %li.votos
         %span
           = iniciativa.total_votes
@@ -41,10 +41,10 @@
       %li.comentarios
         %span
           = iniciativa.comments.count
-        comentarios
+        Comentarios
       %li.numero_iniciativa
         %span= iniciativa.number
-        #{'#'} de iniciativa
+        #{'#'} de proyecto
       %li.share
         .share-fb
           <div class="fb-send" data-href="http://voces.herokuapp.com/"></div>

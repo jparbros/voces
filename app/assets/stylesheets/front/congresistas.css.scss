@@ -39,7 +39,7 @@ html {
           margin: 10px 10px 10px 0;
 
           span {
-            @include arial-font($light-cyanish-gray, 11px, uppercase);
+            @include arial-font($light-cyanish-gray, 11px, none);
             background: url('/assets/front/mensaje.png') no-repeat;
             display: block;
             font-weight: bold;
@@ -121,7 +121,7 @@ html {
               }
 
               span {
-                @include terminal-font(uppercase, $moderate-red, 14px);
+                @include terminal-font(none, $moderate-red, 14px);
                 display: block;
               }
 
@@ -137,7 +137,7 @@ html {
 
           &.contadores {
             li {
-              @include terminal-font(uppercase, $grey, 13px);
+              @include terminal-font(none, $grey, 13px);
               border-top: 1px solid #f1eee9;
               float: left;
               height: 27px;
@@ -224,7 +224,7 @@ html {
             &:first-child { width: 215px; border: 0;}
 
             li {
-              @include arial-font($dark-grey, 13px, uppercase);
+              @include arial-font($dark-grey, 13px, none);
               padding: 10px 0;
 
               img {
@@ -269,7 +269,7 @@ html {
       span {
         display: block;
         color: $grayish-cyan;
-        text-transform: uppercase;
+        text-transform: none;
 
         &.nombre { font-size: 18px; color: $dark-grey;}
       }

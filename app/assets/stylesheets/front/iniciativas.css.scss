@@ -174,7 +174,7 @@ article {
 
           &:first-child {
             @extend .first-child;
-            text-transform: uppercase;
+            text-transform: none;
           }
         }
       }
@@ -183,7 +183,7 @@ article {
         border-top: 1px solid $grey-2;
 
         li {
-          @include terminal-font(uppercase, $dark-grey, 13px);
+          @include terminal-font(none, $dark-grey, 13px);
           border: 1px solid $grey-2;
           float: left;
           height: 24px;
@@ -207,7 +207,7 @@ article {
         border-top: 1px solid $grey-2;
 
         li {
-          @include terminal-font(uppercase, $dark-grey, 13px);
+          @include terminal-font(none, $dark-grey, 13px);
           float: left;
           height: 24px;
           padding-top: 6px;
@@ -246,7 +246,7 @@ article {
 
 
         li {
-          @include terminal-font(uppercase, $dark-grey, 13px);
+          @include terminal-font(none, $dark-grey, 13px);
           float: left;
           height: 77px;
           padding-top: 6px;
@@ -271,14 +271,14 @@ article {
         border-top: 1px solid $grey-2;
 
         li {
-          @include terminal-font(uppercase, $dark-grey, 13px);
+          @include terminal-font(none, $dark-grey, 13px);
           float: left;
           height: 24px;
           padding-top: 6px;
           text-align: center;
 
           a {
-            @include terminal-font(uppercase, $dark-grey, 13px);
+            @include terminal-font(none, $dark-grey, 13px);
 
             &:hover { color: $dark-grey;}
           }
@@ -308,7 +308,7 @@ article {
 
       &.etapa {
         li {
-          @include terminal-font(uppercase, $dark-grey, 13px);
+          @include terminal-font(none, $dark-grey, 13px);
           border-left: 1px solid  $grey-2;
           float: left;
           height: 24px;
@@ -359,7 +359,7 @@ article {
           }
 
           a {
-            @include terminal-font(uppercase, $white, 15px);
+            @include terminal-font(none, $white, 15px);
             color: $white;
             height: 40px;
             width: 200px;

@@ -2,11 +2,8 @@
   .main-banner
     = image_tag 'front/main-banner.png'
     .pie-de-banner
-      %P
-        CONOCE A TUS CONGRESISTAS Y PARTICIPA EN LA
       %p
-        CREACIÓN DE MEJORES LEYES EN BENEFICIO DE TODOS.
-
+        Conoce a tus congresistas y sus proyectos de ley. Infórmate, opina y participa. ¡Tú puedes ser el congresista 131!
   %aside
     %h2
       - if @iniciativa.main
@@ -21,13 +18,13 @@
         = (@iniciativa.representative)? link_to(@iniciativa.representative.try(:name), congresista_path(@iniciativa.representative)) : ''
 
     %p.description
-      = @iniciativa.description
+      = link_to @iniciativa.description, iniciativa_path(@iniciativa)
 
     %ul.colores
       %li.comenta
-        vota
+        Vota
         %br
-        = link_to 'comenta', '#', 'data-controls-modal' => "comment-modal-#{@iniciativa.id}"
+        Comenta
       %li.votos
         %span
           = @iniciativa.total_votes
@@ -41,27 +38,27 @@
 
     %ul.info
       %li
-        estado del proyecto de ley
+        Etapa del proyecto de ley
         %span= @iniciativa.state_formated
       %li
-        votacion oficial
+        Votaci&oacute;n oficial
         %span
-          a favor:
+          A favor:
           = "#{@iniciativa.official_percentage_up}%"
         %span
-          en contra:
+          En contra:
           = "#{@iniciativa.official_percentage_down}%"
       %li
-        votacion 131 voces
+        Votaci&oacute;n 131 voces
         %span
-          a favor:
+          A favor:
           = "#{@iniciativa.percentage_votes_up}%"
         %span
-          en contra:
+          En contra:
           = "#{@iniciativa.percentage_votes_down}%"
 
   %article#home
-    %h2 integrantes del congreso
+    %h2 Integrantes del congreso
     = image_tag 'front/home-peru.png'
     = form_tag search_representative_path, :method => :post do
       = label_tag :buscar_por_nombre
@@ -69,7 +66,7 @@
       = text_field_tag 'search[name]'
       .input
         %label
-          circunscripci&oacute;n electoral
+          Circunscripci&oacute;n electoral
         %br
         = select_tag 'search[state]', options_for_select(Region.all.collect {|region| [region.name, region.id]}), :include_blank => true
-      = submit_tag :buscar, :class => :button
+      = submit_tag 'Buscar', :class => :button

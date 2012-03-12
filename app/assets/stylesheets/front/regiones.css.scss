@@ -35,7 +35,7 @@ html {
 
       a.volver {
         color: $moderate-red;
-        text-transform: uppercase;
+        text-transform: none;
       }
 
       .logo {
@@ -43,7 +43,7 @@ html {
         text-align: center;
 
         span {
-          @include terminal-font(uppercase, $grey, 14px);
+          @include terminal-font(none, $grey, 14px);
           display: block;
         }
       }
@@ -62,7 +62,7 @@ html {
           width: 735px;
 
           span {
-            @include terminal-font(uppercase, $moderate-red, 14px);
+            @include terminal-font(none, $moderate-red, 14px);
 
             &.position {font-size: 13px; font-style: italic;}
           }

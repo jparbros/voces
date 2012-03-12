@@ -22,8 +22,8 @@ html {
         &.comenta { background: url('/assets/front/mensaje.png') no-repeat 0 0; }
 
         span {
-          &.author { font-weight: bold; text-transform: uppercase; }
-          &.representante { color: $dark-grey; text-transform: uppercase;}
+          &.author { font-weight: bold; text-transform: none; }
+          &.representante { color: $dark-grey; text-transform: none;}
         }
       }
 
@@ -53,8 +53,8 @@ html {
           padding: 4px 0 0 30px;
 
           span {
-            &.author { font-weight: bold; text-transform: uppercase; }
-            &.representante { color: $very-dark-persian-blue; text-transform: uppercase;}
+            &.author { font-weight: bold; text-transform: none; }
+            &.representante { color: $very-dark-persian-blue; text-transform: none;}
           }
         }
 
@@ -67,7 +67,7 @@ html {
           span {
             color: $very-dark-persian-blue;
             display: block;
-            text-transform: uppercase;
+            text-transform: none;
           }
         }
 

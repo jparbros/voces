@@ -44,7 +44,7 @@ html {
           padding: 15px 20px;
 
           h4 {
-            @include cuprum-font($dark, 13px, uppercase);
+            @include cuprum-font($dark, 13px, none);
             border-bottom: 1px solid $dark;
           }
 

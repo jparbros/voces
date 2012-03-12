@@ -1,18 +1,18 @@
 #iniciativas
-  %h1 proyectos de ley
+  %h1 Proyectos de ley
   .content
     %aside
       %h2
-        buscar iniciativa
+        Buscar proyecto
 
       = form_tag search_initiatives_path, :method => :post do |form|
 
-        = text_field_tag 'search[keywords]', '', :placeholder => 'palabras clave', :class => 'input'
+        = text_field_tag 'search[keywords]', '', :placeholder => 'Palabras clave', :class => 'input'
 
-        = submit_tag :buscar, :class => 'button'
+        = submit_tag 'Buscar', :class => 'button'
 
       %h2
-        temas
+        Temas
       %ul.ul-aside
         - @temas.each do |tema|
           %li= link_to tema.name, tema_path(tema)
@@ -41,16 +41,16 @@
               - estado_de_iniciativa(@iniciativa)
 
               %ul.etapa
-                %li etapa
+                %li Etapa
                 %li= @iniciativa.state_formated
 
               %ul.etapa
-                %li descripcion
+                %li Descripcion
                 %li
                   - state_description(@iniciativa.state)
 
               %ul.recursos
-                %li recursos adicionales
+                %li Informaci&oacute;n complementaria
                 - @iniciativa.resources.each do |resource|
                   %li= link_to resource.name, resource.url
 
@@ -59,14 +59,14 @@
                 %li.votos
                   %span
                     = @iniciativa.total_votes
-                  votos
+                  Votos
                 %li.comentarios
                   %span
                     = @iniciativa.comments.count
-                  comentarios
+                  Comentarios
                 %li.numero_iniciativa
                   %span= @iniciativa.id
-                  #{'#'} de iniciativa
+                  #{'#'} de proyecto
                 %li.share
                   .share-fb
                     <a name="fb_share" type="button" share_url="#{iniciativa_url(@iniciativa)}">Enviar</a>
@@ -75,24 +75,24 @@
 
           %ul.botones
             - if cookies["voted_#{@iniciativa.id}"]
-              %li.favor= link_to "vota a favor", ""
-              %li.contra= link_to "vota en contra", ""
+              %li.favor= link_to "Vota a favor", ""
+              %li.contra= link_to "Vota en contra", ""
             - else
-              %li.favor= link_to "vota a favor", iniciativa_vote_up_path(@iniciativa), :method => :post, :class => 'favor'
-              %li.contra= link_to "vota en contra", iniciativa_vote_down_path(@iniciativa), :method => :post, :class => 'contra'
-            %li.comenta= link_to "comenta", '#comenta'
+              %li.favor= link_to "Vota a favor", iniciativa_vote_up_path(@iniciativa), :method => :post, :class => 'favor'
+              %li.contra= link_to "Vota en contra", iniciativa_vote_down_path(@iniciativa), :method => :post, :class => 'contra'
+            %li.comenta= link_to "Comenta", '#comenta'
 
           #separator &nbsp
 
           .votaciones
-            %h2.no-border votaciones
+            %h2.no-border Votaciones
 
             - votacion_local(@iniciativa)
 
             - votacion_oficial(@iniciativa)
 
             %ul.votacion-pleno
-              %li votacion en pleno
+              %li Votaci&oacute;n en pleno
               %li.favor= "#{@iniciativa.official_vote_up} Votos a favor"
               %li.favor= "#{@iniciativa.official_vote_down} Votos en contra"
               %li= "#{@iniciativa.official_vote_abstentions || 0} Abstenciones"
@@ -102,7 +102,7 @@
       .haz-comentario
         .comenta-content
           %a{:name => 'comenta'}
-            %h2 deja tu comentario
+            %h2 Deja tu comentario
 
           = form_for Comment.new, :url => iniciativa_comments_path(@iniciativa), :method => :post do |form|
             .form-inputs
@@ -116,10 +116,10 @@
 
             = hidden_field_tag :other_email
 
-            = submit_tag 'comenta', :class => 'submit span4'
+            = submit_tag 'Comenta', :class => 'submit span4'
 
       %article.iniciativa{:class => "#{(@iniciativa.main?)? 'main' :  ''}"}
-        %h3 comentarios
+        %h3 Comentarios
 
         - @iniciativa.comments.each do |comment|
           %p.comment
