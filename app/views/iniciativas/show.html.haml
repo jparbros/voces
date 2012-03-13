@@ -33,6 +33,9 @@
                   %span
                     = link_to @iniciativa.representative.name, congresista_path(@iniciativa.representative) if @iniciativa.representative
 
+                %h2
+                  = @iniciativa.title
+
                 %p.description
                   = @iniciativa.description
 

@@ -15,9 +15,9 @@
 
       %p.description
         - if show
-          = iniciativa.description
+          = iniciativa.title
         - else
-          = link_to iniciativa.description, iniciativa_path(iniciativa)
+          = link_to iniciativa.title, iniciativa_path(iniciativa)
 
     - temas(iniciativa)
 
