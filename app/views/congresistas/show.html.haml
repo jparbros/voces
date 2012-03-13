@@ -1,4 +1,4 @@
-%h1 congresistas de la republica
+%h1 Congresistas de la Rep&uacute;blica
 
 %aside
   %h2
@@ -13,17 +13,22 @@
   %ul.temas
     - @representante.topics.each do |topic|
       %li
-        = topic.name
+        = link_to topic.name, search_representative_path( :search => {:topic => topic.name})
+
+  %h2
+    Twitter
+  .tweet
+    = 'No disponible' unless @representante.twitter
 
 .congresista_content
   %article
     %h2
-      representante de
+      Representante de
       = @representante.region.name if @representante.region
 
     .primera-columna
       = image_tag @representante.photo
-      %h4 iniciativas
+      %h4 Iniciativas
       %ul.iniciativas
         - @representante.initiatives.each do |iniciativa|
           %li
@@ -31,8 +36,12 @@
 
     .segunda-columna
       %p
-        %span nombre
+        %span Nombre
         %span.nombre= @representante.name
+
+      %p
+        %span Votos obtenidos
+        %span.nombre= @representante.number_votes
 
       %p
         %span Grupo Parlamentario
@@ -44,33 +53,33 @@
         = @representante.political_party.name if @representante.political_party
 
       %p
-        %span email
+        %span Email
         = @representante.email
 
       %p
-        %span telefono
+        %span Telefono
         = @representante.phone
 
       %p
-        %span twitter
+        %span Twitter
         = "#{@representante.twitter || 'no disponible'}"
 
       %p
-        %span fecha de nacimiento
+        %span Fecha de nacimiento
         = @representante.birthday
 
       %p
-        %span comisiones
+        %span Comisiones
         - @representante.commissions.collect do |commision|
           = link_to commision.name + ',', comisione_path(commision)
 
       %p
-        %span resumen de trayectoria
+        %span Resumen de trayectoria
         = @representante.biography
 
 
   %article
-    %h2 deja tu comentario
+    %h2 Deja tu comentario
 
     = form_for @comment, :url => congresista_comentarios_path(@representante) do |form|
       .form-inputs
@@ -82,11 +91,11 @@
 
       = hidden_field_tag :other_email
 
-      = submit_tag 'comenta', :class => 'submit span4'
+      = submit_tag 'Comenta', :class => 'submit span4'
 
 
   %article
-    %h3 comentarios
+    %h3 Comentarios
     - @comments.each do |comentario|
       .comment
         %p

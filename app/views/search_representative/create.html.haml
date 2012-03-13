@@ -1,4 +1,4 @@
-%h1 congresistas de la republica
+%h1 Congresistas de la republica
 
 %article
   %h2
@@ -18,19 +18,19 @@
           %ul
             %li= image_tag(representante.photo(:thumb))
             %li.nombre
-              %span nombre
-              %br
               = link_to(representante.name, congresista_path(representante))
+              %br
+              = representante.region_name.capitalize
               %br
               %span.position= representante.position
             %li
-              %span contacto
+              %span Contacto
               %br
               = representante.email
               %br
-              %span tel.
+              %span Tel.
               =representante.phone
-              %span twitter
+              %span Twitter
               =representante.twitter
 
 

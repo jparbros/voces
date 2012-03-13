@@ -40,6 +40,11 @@
     .input
       = form.select :state, Initiative::STATES.to_a.each {|t| t.reverse!}
 
+  .clearfix
+    = form.label :url_proyecto_de_ley
+    .input
+      = form.text_field :additional_resources_url, :class => 'xxlarge'
+
 %fieldset
   %legend Recursos Adicionales
 

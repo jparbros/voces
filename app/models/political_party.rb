@@ -10,6 +10,11 @@ class PoliticalParty < ActiveRecord::Base
   #
   mount_uploader :logo, LogoUploader
 
+  #
+  # Scope
+  #
+  default_scope order('name ASC')
+
   def initials
     name.split(' ').collect {|word| word.first.downcase}.join('') if name
   end

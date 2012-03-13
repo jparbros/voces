@@ -27,7 +27,7 @@ a {
 }
 
 h1 {
-  @include terminal-font('normal',$white, 36px, capitalize);
+  @include terminal-font('normal',$white, 36px, none);
   background: url("/assets/front/top-bg.png") no-repeat;
   margin: 20px 0 0 0;
   padding: 5px;

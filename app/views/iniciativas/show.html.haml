@@ -23,7 +23,10 @@
           .main
             .content
               .iniciativa_icon
-                = link_to image_tag('front/iniciativa.png'), iniciativa_path(@iniciativa)
+                - if @iniciativa.additional_resources_url
+                  = link_to image_tag('front/iniciativa.png'), @iniciativa.additional_resources_url, :target => '_blank'
+                - else
+                  = image_tag('front/iniciativa.png')
               .iniciativa_info
                 %p.info
                   %span.date
@@ -68,11 +71,11 @@
                     = @iniciativa.comments.count
                   Comentarios
                 %li.numero_iniciativa
-                  %span= @iniciativa.id
+                  %span= @iniciativa.number
                   #{'#'} de proyecto
                 %li.share
                   .share-fb
-                    <a name="fb_share" type="button" share_url="#{iniciativa_url(@iniciativa)}">Enviar</a>
+                    <div class="fb-send" data-href="#{iniciativa_url(@iniciativa)}"></div>
                   .share-tw
                     <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="es" data-text="#{@iniciativa.description[0..70]}..." data-url="#{iniciativa_url(@iniciativa)}">Tweet</a>
 

@@ -133,7 +133,7 @@ article {
       min-width: 550px;
 
       &.temas {
-        @include arial-font($light-cyanish-gray, 13px, capitalize);
+        @include arial-font($light-cyanish-gray, 13px, none);
         margin-bottom: 5px;
 
         li {
@@ -142,7 +142,7 @@ article {
            padding: 0 10px;
 
           a {
-            @include arial-font($light-cyanish-gray, 13px, capitalize);
+            @include arial-font($light-cyanish-gray, 13px, none);
 
             &:hover { color: $light-cyanish-gray;}
           }
@@ -160,7 +160,7 @@ article {
         width: 610px;
 
         li {
-          @include arial-font($grey-2, 13px, capitalize);
+          @include arial-font($grey-2, 13px, none);
           float: left;
           height: 24px;
           padding-top: 6px;
@@ -568,12 +568,12 @@ article {
       &.info {
         padding: 30px 0 0 0;
         span a {
-          @include arial-font($dark-grey, 11px, capitalize);
+          @include arial-font($dark-grey, 11px, none);
           color: $moderate-red;
         }
 
         span.date {
-          text-transform: capitalize;
+          text-transform: none;
         }
       }
 
