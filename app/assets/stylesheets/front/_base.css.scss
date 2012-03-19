@@ -177,8 +177,7 @@ article {
 }
 
 .tweet {
-  @include arial-font($dark-grey, 10px, none);
-  margin: 0 0 100px 20px;
+  margin: 0 0 0 20px;
   width: 200px;
 
   ul {

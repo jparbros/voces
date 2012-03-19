@@ -2,29 +2,31 @@
 
 %aside
   %h2
+    Twitter
+  .tweet
+    = "Twitter no disponible" if @representante.twitter.blank?
+
+  %h2
     Representaci&oacute;n
   %ul.representacion
     - @representante.representation_actions.each do |representation_action|
       %li
         = link_to representation_action.name, representation_action.url, :target => '_blank'
+    = "Representación no disponible" if @representante.representation_actions.blank?
 
   %h2
-    Temas de interes de #{@representante.name}
+    Temas de interes del congresista
   %ul.temas
     - @representante.topics.each do |topic|
       %li
         = link_to topic.name, search_representative_path( :search => {:topic => topic.name})
-
-  %h2
-    Twitter
-  .tweet
-    = 'No disponible' unless @representante.twitter
+    = "Temas de interes no disponibles" if @representante.topics
 
 .congresista_content
   %article
     %h2
       Representante de
-      = @representante.region.name if @representante.region
+      = @representante.region.name.capitalize if @representante.region
 
     .primera-columna
       = image_tag @representante.photo
@@ -41,7 +43,7 @@
 
       %p
         %span Votos obtenidos
-        %span.nombre= @representante.number_votes
+        = number_with_delimiter(@representante.number_votes)
 
       %p
         %span Grupo Parlamentario
@@ -109,7 +111,7 @@
             = reply.comment
 
 <script>
-- if @representante.twitter
+- if @representante.twitter.present?
   jQuery(function($){
   $(".tweet").tweet({
   username: "#{@representante.twitter}",
