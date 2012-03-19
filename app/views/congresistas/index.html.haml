@@ -1,4 +1,4 @@
-%h1 congresistas de la republica
+%h1 Congresistas de la Republica
 
 %aside
   = render :partial => 'shared/congresistas_aside'
@@ -9,6 +9,6 @@
     %ul.iniciales
       - ('A'..'Z').to_a.each do |initial|
         %li= link_to initial, search_representative_path(:search => {:initial => initial})
-    %h2 integrantes m&aacute;s comentados
+    %h2 Integrantes m&aacute;s comentados
 
   = render :partial => 'representante', :collection => @representantes
