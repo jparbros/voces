@@ -220,7 +220,8 @@ article {
           }
 
           &.en-contra {
-            color: #000;
+            background-color: $light-vermilion;
+            color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
@@ -290,7 +291,8 @@ article {
           }
 
           &.en-contra {
-            color: #000;
+            background-color: $light-vermilion;
+            color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
@@ -322,6 +324,14 @@ article {
       }
 
       &.recursos {
+
+        .recurso {
+          background: url("/assets/front/bullet.png") no-repeat scroll 0 0 transparent;
+          margin: 0 0 10px;
+          padding: 0 0 0 20px;
+          width: 350px;
+        }
+
         li {
           border-left: 1px solid  $grey-2;
           float: left;
@@ -574,6 +584,14 @@ article {
 
         span.date {
           text-transform: none;
+        }
+      }
+
+      &.texto {
+        text-align: right;
+
+        a {
+          color: $moderate-red;
         }
       }
 
