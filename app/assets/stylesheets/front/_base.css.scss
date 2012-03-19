@@ -17,6 +17,24 @@ a {
   @include terminal-font(normal, $dark-grey, 14px);
 }
 
+
+span {
+  &.button-up {
+    background: url(/assets/front/up.png) no-repeat;
+    display: inline-block;
+    height: 25px;
+    margin: 0 100px;
+    width: 30px;
+  }
+
+  &.button-down {
+    background: url(/assets/front/down.png) no-repeat;
+    display: inline-block;
+    height: 25px;
+    margin: 0 100px;
+    width: 30px;
+  }
+}
 .error { border: 1px solid red !important;}
 
 #container {
