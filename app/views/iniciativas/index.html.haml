@@ -23,6 +23,10 @@
           %li= link_to tema.name, tema_path(tema)
 
   %section.container
+    - if params[:controller] == 'search_initiatives' && @iniciativas.total_count
+      %article.iniciativa
+        %h2
+          = "#{@iniciativas.total_count} Proyectos de ley encontrados"
 
     = render :partial => 'iniciativas/iniciativa', :collection => @iniciativas, :locals => { :show => false }
 
