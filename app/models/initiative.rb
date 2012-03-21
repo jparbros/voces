@@ -99,11 +99,11 @@ class Initiative < ActiveRecord::Base
   end
 
   def total_official_votes
-    (official_vote_up || 0) + (official_vote_down || 0)
+    (official_vote_up || 0) + (official_vote_down || 0) + (official_vote_abstentions || 0)
   end
 
   def official_voted?
-    (official_vote_up || 0) > 0 && (official_vote_down || 0) > 0
+    (total_official_votes < 0)
   end
 
   def percentage_votes_up
