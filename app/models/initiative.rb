@@ -72,6 +72,14 @@ class Initiative < ActiveRecord::Base
     self.representative = representante
   end
 
+  def number_format
+    "#{number}-#{year}"
+  end
+
+  def number_format_complete
+    "#{number}-#{year}-#{proponent}"
+  end
+
   def official_percentage_up
     p1 = (((official_vote_up.to_f*100)/total_official_votes))
     p1.nan? ? 0 : p1.round

@@ -8,7 +8,10 @@
   .clearfix
     = form.label :numero
     .input
-      = form.number_field :number, :class => 'xxlarge'
+      = form.number_field :number, :class => 'medium', :placeholder => 'Numero'
+      = form.number_field :year, :class => 'medium', :placeholder => 'Año'
+      = form.text_field :proponent, :class => 'medium', :placeholder => 'Proponente'
+
 
   .clearfix
     = form.label :titulo
