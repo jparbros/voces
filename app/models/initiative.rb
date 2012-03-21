@@ -73,11 +73,11 @@ class Initiative < ActiveRecord::Base
   end
 
   def number_format
-    "#{number}-#{year}"
+    "#{self.number}-#{self.year}"
   end
 
   def number_format_complete
-    "#{number}-#{year}-#{proponent}"
+    "#{self.number}-#{self.year}-#{self.proponent}"
   end
 
   def official_percentage_up
