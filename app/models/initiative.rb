@@ -103,7 +103,7 @@ class Initiative < ActiveRecord::Base
   end
 
   def official_voted?
-    (total_official_votes < 0)
+    (total_official_votes > 0)
   end
 
   def percentage_votes_up
