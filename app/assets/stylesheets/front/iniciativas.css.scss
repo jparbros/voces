@@ -25,8 +25,8 @@
 
     .comenta-content {
       @include column(17, true);
-      border-top: 1px solid $grey;
-      border-bottom: 1px solid $grey;
+      border-top: 1px solid $dark-grey;
+      border-bottom: 1px solid $dark-grey;
 
       form {
         float: left;
@@ -34,7 +34,7 @@
 
         input, textarea {
           background-color: $white;
-          border: 1px solid $grey;
+          border: 1px solid $dark-grey;
         }
       }
 
@@ -111,7 +111,7 @@ article {
         }
 
         &.contra {
-          background-color: $light-vermilion;
+          background-color: $pale-grayish-pink;
         }
 
       }
@@ -121,7 +121,7 @@ article {
 
     #separator {
       @include column(17, true);
-      background-color: $light-gamboge;
+      background-color: $light-cyan;
       height: 20px;
       margin: -12px 0 0 -30px;
     }
@@ -130,25 +130,25 @@ article {
       display: inline;
       float: left;
       margin-top: 10px;
-      min-width: 550px;
+      min-width: 540px;
 
       &.temas {
-        @include arial-font($light-cyanish-gray, 13px, none);
+        @include oswald-font($strong-raspberry, 12px);
         margin-bottom: 5px;
 
         li {
-           border-left: 1px solid $light-cyanish-gray;
+           border-left: 1px solid $strong-raspberry;
            float: left;
            padding: 0 10px;
 
           a {
-            @include arial-font($light-cyanish-gray, 13px, none);
+            @include oswald-font($strong-raspberry, 13px);
 
-            &:hover { color: $light-cyanish-gray;}
+            &:hover { color: $strong-raspberry;}
           }
 
           &:last-child {
-            border-right: 1px solid $grayish-cyan;
+            border-right: 1px solid $strong-raspberry;
           }
         }
       }
@@ -156,13 +156,14 @@ article {
       &.votacion-pleno {
         @include column-base(true);
         margin-top: 10px;
-        border-top: 1px solid $grey-2;
+        border-top: 1px solid $dark-grey;
         width: 610px;
 
         li {
-          @include arial-font($grey-2, 13px, none);
+          @include oswald-font($dark-grey, 13px);
           float: left;
           height: 24px;
+          margin: -1px 0 0;
           padding-top: 6px;
           text-align: center;
 
@@ -180,22 +181,22 @@ article {
       }
 
       &.estado {
-        border-top: 1px solid $grey-2;
+        border-top: 1px solid $dark-grey;
 
         li {
           @include terminal-font(none, $dark-grey, 13px);
           border: 1px solid $grey-2;
           float: left;
           height: 24px;
-          margin-left: 1px;
+          margin: -1px 0 0 1px;
           padding-top: 6px;
           text-align: center;
           width: 93px;
 
-          &.presentation { background-color: #a196a5; color: $white;}
-          &.commission { background-color: #827387; color: $white; }
-          &.plenary { background-color: #5b4763; color: $white; }
-          &.project { background-color: #34193e; color: $white; }
+          &.presentation { background-color: $light-cyan; color: $white;}
+          &.commission { background-color: $grayish-cyan; color: $white; }
+          &.plenary { background-color: $grayish-cyan-dark; color: $white; }
+          &.project { background-color: $grayish-cyan-darker; color: $white; }
 
           &:first-child {
             @extend .first-child;
@@ -204,30 +205,33 @@ article {
       }
 
       &.votacion-oficial {
-        border-top: 1px solid $grey-2;
+        border-top: 1px solid $dark-grey;
 
         li {
           @include terminal-font(none, $dark-grey, 13px);
           float: left;
           height: 24px;
+          margin: -1px 0 0;
           padding-top: 6px;
           text-align: center;
 
           &.a-favor {
             background-color: $light-cyanish-gray;
+            border-top: 1px solid $dark-grey;
             min-width: 57px;
             max-width: 327px;
           }
 
           &.en-contra {
-            background-color: $light-vermilion;
+            background-color: $pale-grayish-pink;
+            border-top: 1px solid $dark-grey;
             color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
 
           &.no-votada {
-            border: 1px solid $grey-2;
+            border: 1px solid $dark-grey;
             width: 383px;
           }
 
@@ -269,12 +273,13 @@ article {
       &.votaciones-logos { border: 0;}
 
       &.votacion-local {
-        border-top: 1px solid $grey-2;
+        border-top: 1px solid $dark-grey;
 
         li {
           @include terminal-font(none, $dark-grey, 13px);
           float: left;
           height: 24px;
+          margin: -1px 0 0;
           padding-top: 6px;
           text-align: center;
 
@@ -286,19 +291,21 @@ article {
 
           &.a-favor {
             background-color: $light-cyanish-gray;
+            border-top: 1px solid $dark-grey;
             min-width: 57px;
             max-width: 327px;
           }
 
           &.en-contra {
-            background-color: $light-vermilion;
+            background-color: $pale-grayish-pink;
+            border-top: 1px solid $dark-grey;
             color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
 
           &.no-votada {
-            border: 1px solid $grey-2;
+            border: 1px solid $dark-grey;
             width: 190px;
           }
 
@@ -310,8 +317,8 @@ article {
 
       &.etapa {
         li {
-          @include terminal-font(none, $dark-grey, 13px);
-          border-left: 1px solid  $grey-2;
+          @include oswald-font($dark-grey, 13px);
+          border-left: 1px solid  $dark-grey;
           float: left;
           height: 24px;
           padding-top: 6px;
@@ -333,7 +340,7 @@ article {
         }
 
         li {
-          border-left: 1px solid  $grey-2;
+          border-left: 1px solid  $dark-grey;
           float: left;
           padding-left: 5px;
 
@@ -361,11 +368,11 @@ article {
           }
 
           &.contra {
-            background: $light-vermilion;
+            background: $pale-grayish-pink;
           }
 
           &.comenta {
-             background: $moderate-red;
+             background: $strong-raspberry;
           }
 
           a {
@@ -396,31 +403,31 @@ article {
         margin-bottom: 10px;
 
         &.temas {
-          @include arial-font($grayish-cyan, 10px, downcase);
+          @include oswald-font($strong-raspberry, 12px);
           margin-bottom: 5px;
 
           li {
-            @include arial-font($grayish-cyan, 10px, downcase);
-            border-left: 1px solid $grayish-cyan;
+            @include oswald-font($strong-raspberry, 12px);
+            border-left: 1px solid $strong-raspberry;
             float: left;
             padding: 0 10px;
 
             &:last-child {
-              border-right: 1px solid $grayish-cyan;
+              border-right: 1px solid $strong-raspberry;
             }
 
             a {
-             @include arial-font($grayish-cyan, 10px, downcase);
+             @include oswald-font($strong-raspberry, 12px);
             }
           }
         }
 
         &.estado {
-          border-top: 1px solid $grey-2;
+          border-top: 1px solid $dark-grey;
 
           li {
-            @include terminal-font(normal, $dark-grey, 11px);
-            border: 1px solid $grey-2;
+            @include oswald-font($dark-grey, 12px);
+            border: 1px solid $dark-grey;
             float: left;
             height: 24px;
             margin-left: 1px;
@@ -435,29 +442,32 @@ article {
         }
 
         &.votacion-oficial {
-          border-top: 1px solid $grey-2;
+          border-top: 1px solid $dark-grey;
 
           li {
-            @include terminal-font(normal, $dark-grey, 12px);
+            @include oswald-font($dark-grey, 12px);
             float: left;
             height: 24px;
+            margin: -1px 0 0;
             padding-top: 6px;
             text-align: center;
 
             &.a-favor {
-              background-color: $light-cyanish-gray;
+              background-color: $dark-grey;
+              border-top: 1px solid $dark-grey;
               min-width: 57px;
               max-width: 327px;
             }
 
             &.en-contra {
               color: #fff;
+              border-top: 1px solid $dark-grey;
               min-width: 57px;
               max-width: 327px;
             }
 
             &.no-votada {
-              border: 1px solid $grey-2;
+              border: 1px solid $dark-grey;
               width: 383px;
             }
 
@@ -469,33 +479,36 @@ article {
 
 
         &.votacion-local {
-          border-top: 1px solid $grey-2;
+          border-top: 1px solid $dark-grey;
 
           li {
-            @include terminal-font(normal, $dark-grey, 12px);
+            @include oswald-font($dark-grey, 12px);
             float: left;
             height: 24px;
+            margin: -1px 0 0;
             padding-top: 6px;
             text-align: center;
 
             a {
-              @include terminal-font(normal, $dark-grey, 12px);
+              @include oswald-font($dark-grey, 12px);
             }
 
             &.a-favor {
-              background-color: $grey-2;
+              background-color: $dark-grey;
+              border-top: 1px solid $dark-grey;
               min-width: 57px;
               max-width: 327px;
             }
 
             &.en-contra {
+              border-top: 1px solid $dark-grey;
               color: #fff;
               min-width: 57px;
               max-width: 327px;
             }
 
             &.no-votada {
-              border: 1px solid $grey-2;
+              border: 1px solid $dark-grey;
               width: 190px;
             }
 
@@ -536,23 +549,23 @@ article {
           }
 
           &.comenta {
-            background: $moderate-red;
+            background: $strong-raspberry;
             height: 35px;
             padding-top: 5px;
           }
 
           &.votos {
-            background-color: $light-vermilion;
+            background-color: $grayish-cyan;
             height: 75px;
           }
 
           &.comentarios {
-            background-color: $light-gamboge;
+            background-color: $light-cyan;
             height: 75px;
           }
 
           &.numero_iniciativa {
-            background-color: $grey-2;
+            background-color: $light-gray;
 
             span { font-size: 20px;}
           }
@@ -572,13 +585,13 @@ article {
     }
 
     p {
-      @include arial-font($dark-grey, 11px, none);
+      @include oswald-font($dark-grey, 11px);
       margin-bottom: 10px;
 
       &.info {
         padding: 30px 0 0 0;
         span a {
-          @include arial-font($dark-grey, 11px, none);
+          @include oswald-font($dark-grey, 11px);
           color: $moderate-red;
         }
 
@@ -596,7 +609,7 @@ article {
       }
 
       &.comment {
-        border-bottom: 1px solid $grey-2;
+        border-bottom: 1px solid $dark-grey;
         margin-bottom: 5px;
         padding-bottom: 5px;
 
@@ -607,12 +620,12 @@ article {
       }
 
       &.description {
-        color: $very-dark-persian-blue;
+        color: $reddish-brownish-black;
         font-size: 16px;
         margin-bottom: 40px;
 
         a {
-          @include arial-font($dark-grey, 16px, none);
+          @include oswald-font($dark-grey, 14px);
         }
       }
     }

@@ -32,7 +32,7 @@ html {
 
       .comment {
         margin-bottom: 10px;
-        border-bottom: 1px solid $grey-2;
+        border-bottom: 1px solid $dark-grey;
 
         p {
           padding-bottom: 10px;
@@ -95,7 +95,7 @@ html {
 
             li {
               @include arial-font($dark-grey, 18px);
-              border-right: 1px dashed $grey;
+              border-right: 1px dashed $dark-grey;
               float: left;
               height: 50px;
               padding: 10px;
@@ -137,7 +137,7 @@ html {
 
           &.contadores {
             li {
-              @include terminal-font(none, $grey, 13px);
+              @include oswald-font(13px, $dark-grey);
               border-top: 1px solid #f1eee9;
               float: left;
               height: 27px;
@@ -188,12 +188,12 @@ html {
 
       .comentarios {
         @include column(16, true);
-        border-top: 1px solid $grey-2;
-        border-bottom: 1px solid $grey-2;
+        border-top: 1px solid $dark-grey;
+        border-bottom: 1px solid $dark-grey;
 
         p {
           @include arial-font($dark-grey, 13px);
-          border-top: 1px solid $grey-2;
+          border-top: 1px solid $dark-grey;
           padding-top: 10px;
         }
       }
@@ -278,7 +278,7 @@ html {
         list-style: none;
 
         li {
-          border-bottom: 1px solid $grey-2;
+          border-bottom: 1px solid $dark-grey;
           margin: 0 0 5px;
           padding: 0 0 5px;
         }

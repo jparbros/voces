@@ -52,13 +52,13 @@ h1 {
 }
 
 h2 {
-  @include terminal-font(light, $moderate-red, 18px);
-  border-bottom: 1px solid $grey;
+  @include oswald-font($dark-grayish-cyan, 18px);
+  border-bottom: 1px solid $dark-grayish-cyan;
   margin: 20px 10px 10px 20px;
   padding: 0 0 5px;
 
   &.estrella {
-    @include terminal-font(semi-bold, $dark-grey, 18px);
+    @include oswald-font($dark-grey, 18px);
     background: url('/assets/front/star-blue.png') no-repeat;
     border-bottom: 1px solid $grey;
     padding-left: 30px;
@@ -109,12 +109,12 @@ section#main-content {
 
 footer {
   @include column(24,true);
-  @include terminal-font('light', $very-dark-persian-blue, 12px);
+  @include oswald-font(12px, $dark-grey);
   margin: 20px 0 20px 0;
   ul {
     li {
       float: left;
-      border-left: 1px solid $very-dark-persian-blue;
+      border-left: 1px solid $dark-grey;
       margin: 0 10px 0 0;
       padding: 10px;
     }
@@ -122,8 +122,8 @@ footer {
 }
 
 .input-text {
-  @include terminal-font(normal, $dark-grey, 14px);
-  background-color: $light-yellowish-gray;
+  @include oswald-font(14px, $dark-grey);
+  background-color: $light-cyanish-gray-2;
   border: 0 none;
   box-shadow: none;
   height: 30px;
@@ -132,8 +132,8 @@ footer {
 }
 
 .submit-button {
-  @include terminal-font(normal, $dark-grey, 14px);
-  background-color: $grayish-cyan;
+  @include oswald-font(14px, $dark-grey);
+  background-color: $strong-raspberry;
   border: 0 none;
   box-shadow: none;
   height: 30px;
@@ -200,7 +200,7 @@ article {
 
   ul {
     li {
-      border-bottom: 1px solid $grey-2;
+      border-bottom: 1px solid $dark-grey;
       margin: 10px 0 0 0;
       padding: 0 0 10px 0;
       a {

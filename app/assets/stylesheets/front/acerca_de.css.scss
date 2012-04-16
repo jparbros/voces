@@ -1,3 +1,71 @@
 // Place all the styles related to the acerca_de controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#acerca_de {
+  section {
+    background-color: $white;
+    float: left;
+    margin: 0 0 20px 0;
+
+    img {
+      float: left;
+      margin: 10px;
+    }
+
+    p {
+      float: left;
+      width: 740px;
+      margin: 0 10px 10px 0;
+    }
+
+    h2 {
+      float: left;
+      margin: 20px 10px 20px 0;
+      width: 740px;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    a {
+      color: $strong-raspberry;
+    }
+
+    ul {
+      float: left;
+
+      li {
+        span {
+          float: left;
+          width: 150px;
+        }
+      }
+    }
+
+    &#que_es {
+      img {
+        margin: -40px 10px 10px 10px;
+      }
+    }
+
+    &#informacion {
+      img {
+        margin: -40px 10px 10px 10px;
+      }
+    }
+
+    &#quienes_congresistas {
+      img {
+        margin: -40px -25px 10px;
+      }
+    }
+
+    &#existe_restriccion {
+      img {
+        margin: -10px -10px 10px -12px;
+      }
+    }
+  }
+}
