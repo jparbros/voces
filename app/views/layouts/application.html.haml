@@ -32,7 +32,7 @@
           %li
             %span
               Powered by
-            = image_tag 'http://curul501.org/assets/front/logo.png'
+            = link_to image_tag('http://curul501.org/assets/front/logo.png'), 'http://www.curul501.org', target: '_blank'
 
       = yield :modals
       %script{:type => 'text/javascript'}
