@@ -9,14 +9,18 @@ body > .container, .container-fluid { padding-top: 50px !important}
 html { background: url("/assets/front/header-bk.png") repeat-x, url("/assets/front/background.png") repeat; }
 
 body {
-  @include terminal-font(normal, $dark-grey, 14px);
+  @include oswald-font($dark-gray, 14px);
   background: url("/assets/front/footer-bk.png") repeat-x center bottom ;
 }
 
 a {
-  @include terminal-font(normal, $dark-grey, 14px);
+  @include oswald-font($dark-gray, 14px);
 }
 
+
+.first {
+  margin-left: 0;
+}
 
 span {
   &.button-up {
@@ -45,7 +49,7 @@ span {
 }
 
 h1 {
-  @include terminal-font('normal',$white, 36px, none);
+  @include oswald-font($white, 36px);
   background: url("/assets/front/top-bg.png") no-repeat;
   margin: 20px 0 0 0;
   padding: 5px;
@@ -58,7 +62,7 @@ h2 {
   padding: 0 0 5px;
 
   &.estrella {
-    @include oswald-font($dark-grey, 18px);
+    @include oswald-font($dark-gray, 18px);
     background: url('/assets/front/star-blue.png') no-repeat;
     border-bottom: 1px solid $grey;
     padding-left: 30px;
@@ -85,7 +89,7 @@ header {
   @include column(24,true);
   img { float: left; }
   nav {
-    @include terminal-font(normal, $white, 16px);
+    @include oswald-font($white, 16px);
     float: right;
     margin-top: 100px;
     ul {
@@ -109,20 +113,24 @@ section#main-content {
 
 footer {
   @include column(24,true);
-  @include oswald-font(12px, $dark-grey);
+  @include oswald-font(12px, $dark-gray);
   margin: 20px 0 20px 0;
   ul {
     li {
       float: left;
-      border-left: 1px solid $dark-grey;
+      border-left: 1px solid $dark-gray;
       margin: 0 10px 0 0;
       padding: 10px;
+
+      &:first-child { border: 0}
+
+      span { display: block;}
     }
   }
 }
 
 .input-text {
-  @include oswald-font(14px, $dark-grey);
+  @include oswald-font(14px, $dark-gray);
   background-color: $light-cyanish-gray-2;
   border: 0 none;
   box-shadow: none;
@@ -132,7 +140,7 @@ footer {
 }
 
 .submit-button {
-  @include oswald-font(14px, $dark-grey);
+  @include oswald-font(14px, $dark-gray);
   background-color: $strong-raspberry;
   border: 0 none;
   box-shadow: none;
@@ -160,7 +168,7 @@ aside {
 
   ul {
     &.ul-aside {
-      @include terminal-font(normal, $dark-grey, 14px);
+      @include oswald-font($dark-gray, 14px);
       margin: 0 0 0 20px;
 
       li {
@@ -200,7 +208,7 @@ article {
 
   ul {
     li {
-      border-bottom: 1px solid $dark-grey;
+      border-bottom: 1px solid $dark-gray;
       margin: 10px 0 0 0;
       padding: 0 0 10px 0;
       a {

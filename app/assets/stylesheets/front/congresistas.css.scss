@@ -32,7 +32,7 @@ html {
 
       .comment {
         margin-bottom: 10px;
-        border-bottom: 1px solid $dark-grey;
+        border-bottom: 1px solid $dark-gray;
 
         p {
           padding-bottom: 10px;
@@ -94,17 +94,17 @@ html {
             margin: 5px;
 
             li {
-              @include arial-font($dark-grey, 18px);
-              border-right: 1px dashed $dark-grey;
+              @include arial-font($dark-gray, 18px);
+              border-right: 1px dashed $dark-gray;
               float: left;
               height: 50px;
               padding: 10px;
               width: 370px;
 
               a {
-                @include arial-font($dark-grey, 18px);
+                @include arial-font($dark-gray, 18px);
 
-                &:hover { color:$dark-grey ;}
+                &:hover { color:$dark-gray ;}
               }
 
               &:first-child {
@@ -137,7 +137,7 @@ html {
 
           &.contadores {
             li {
-              @include oswald-font(13px, $dark-grey);
+              @include oswald-font(13px, $dark-gray);
               border-top: 1px solid #f1eee9;
               float: left;
               height: 27px;
@@ -188,12 +188,12 @@ html {
 
       .comentarios {
         @include column(16, true);
-        border-top: 1px solid $dark-grey;
-        border-bottom: 1px solid $dark-grey;
+        border-top: 1px solid $dark-gray;
+        border-bottom: 1px solid $dark-gray;
 
         p {
-          @include arial-font($dark-grey, 13px);
-          border-top: 1px solid $dark-grey;
+          @include arial-font($dark-gray, 13px);
+          border-top: 1px solid $dark-gray;
           padding-top: 10px;
         }
       }
@@ -224,7 +224,7 @@ html {
             &:first-child { width: 215px; border: 0;}
 
             li {
-              @include arial-font($dark-grey, 13px, none);
+              @include arial-font($dark-gray, 13px, none);
               padding: 10px 0;
 
               img {
@@ -245,7 +245,7 @@ html {
         margin-right: 10px;
 
         li {
-          border-bottom: 1px solid $dark-grey;
+          border-bottom: 1px solid $dark-gray;
           margin: 10px 0;
           padding: 0 0 5px;
 
@@ -269,7 +269,7 @@ html {
         color: $grayish-cyan;
         text-transform: none;
 
-        &.nombre { font-size: 18px; color: $dark-grey;}
+        &.nombre { font-size: 18px; color: $dark-gray;}
       }
     }
 
@@ -278,7 +278,7 @@ html {
         list-style: none;
 
         li {
-          border-bottom: 1px solid $dark-grey;
+          border-bottom: 1px solid $dark-gray;
           margin: 0 0 5px;
           padding: 0 0 5px;
         }

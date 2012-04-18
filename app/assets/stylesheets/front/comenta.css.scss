@@ -14,7 +14,7 @@ html {
       padding: 10px 10px 20px 30px;
 
       .header {
-        @include arial-font($dark-grey, 13px);
+        @include arial-font($dark-gray, 13px);
         background: url('/assets/front/comentario.png') no-repeat 0 0;
         height: 20px;
         padding: 3px 0 0 30px;
@@ -23,13 +23,13 @@ html {
 
         span {
           &.author { font-weight: bold; text-transform: none; }
-          &.representante { color: $dark-grey; text-transform: none;}
+          &.representante { color: $dark-gray; text-transform: none;}
         }
       }
 
       p {
-        @include arial-font($dark-grey, 13px);
-        border-bottom: 1px solid $dark-grey;
+        @include arial-font($dark-gray, 13px);
+        border-bottom: 1px solid $dark-gray;
         padding: 10px 0;
       }
     }
@@ -47,7 +47,7 @@ html {
         padding: 10px 10px 10px 30px;
 
         .header {
-          @include arial-font($dark-grey, 13px);
+          @include arial-font($dark-gray, 13px);
           background: url('/assets/front/mensaje.png') no-repeat 0 0;
           height: 20px;
           padding: 4px 0 0 30px;
@@ -61,18 +61,18 @@ html {
         .representante_foto { @include column(2); margin: 10px 0;}
         .iniciativa_resumen {
           @include column(14, true);
-          color: $dark-grey;
+          color: $dark-gray;
           margin: 10px 0;
 
           span {
-            color: $dark-grey;
+            color: $dark-gray;
             display: block;
             text-transform: none;
           }
         }
 
         p {
-          @include arial-font($dark-grey, 13px);
+          @include arial-font($dark-gray, 13px);
           padding: 10px 0;
         }
       }
@@ -113,8 +113,8 @@ html {
 
       h2 {margin: 20px 0 10px 0;}
       .content {
-        border-top: 1px solid $dark-grey;
-        border-bottom: 1px solid $dark-grey;
+        border-top: 1px solid $dark-gray;
+        border-bottom: 1px solid $dark-gray;
         margin: 13px 0 3px;
       }
 

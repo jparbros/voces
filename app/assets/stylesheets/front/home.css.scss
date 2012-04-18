@@ -3,6 +3,94 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #home-page {
+  float:left;
+  margin: 30px 0 0 0;
+
+  #main {
+    margin: 0;
+
+    section {
+      background-color: $white;
+      float: left;
+      margin: 0 0 24px 0;
+
+      &.main-banner {
+        img {
+          &.banner {margin: -30px 28px 10px;}
+          &.que-es {margin: 0 56px 10px}
+        }
+      }
+
+    }
+
+    div {
+      background: $white;
+      margin: 0;
+      padding: 10px 10px 0 15px;
+
+      h2 { margin-left: 0px;}
+
+    }
+
+    div:last-child { margin: 0 0 0 30px;}
+
+    ul {
+
+      &.info {
+        @include column-base;
+        font-size: 13px;
+        width: 125px;
+
+        li {
+          border-bottom: 1px solid $light-gray;
+          padding: 10px 0;
+
+          span {
+            @include oswald-font($reddish-brownish-black, 11px);
+            display: block;
+          }
+        }
+      }
+
+      &.colores {
+        @include column-base;
+        text-align: right;
+        margin: 0 10px 0 -15px;
+        width: 85px;
+
+        li {
+          @include oswald-font($white, 12px);
+          margin-top: 5px;
+          padding: 0 5px 0 0;
+
+          a{
+            @include oswald-font($white, 12px);
+          }
+
+          span {
+            @include oswald-font($white, 60px);
+          }
+
+          &.comenta {
+            background-color: $strong-raspberry;
+            height: 35px;
+            padding-top: 5px;
+          }
+
+          &.votos {
+            background-color: $grayish-cyan;
+            height: 75px;
+          }
+
+          &.comentarios {
+            background-color: $light-cyan;
+            height: 75px;
+          }
+        }
+      }
+    }
+  }
+
   article {
     &#home {
       @extend #content;
@@ -13,47 +101,6 @@
         margin-top: -60px;
       }
 
-      form {
-        @include column(9, true);
-
-        label {
-          font-size: 18px;
-          text-align: left;
-          width: 160px;
-        }
-
-        input {
-          @extend .input-text;
-          @include column(9, true);
-          margin: 0 0 35px 0;
-          width: 330px;
-
-        }
-
-        select {
-          @extend .input-text;
-          @include column(6);
-          margin-left: 0;
-        }
-
-        .input {
-          @include column(6);
-          margin-left: 0;
-        }
-
-        .button {
-          @include column(5);
-          background-color: $grayish-cyan;
-          disply: block;
-          float: none;
-          color: $white;
-          font-size: 30px;
-          height: 50px;
-          margin-top: 35px;
-        }
-
-      }
-
       h2 {
         padding-left: 280px;
       }
@@ -62,9 +109,53 @@
 
   aside {
     min-height: 430px;
+    padding-bottom: 13px;
+
+    h2 {
+      font-size: 36px;
+    }
+
+    form {
+      margin: 15px;
+      width: 250px;
+
+      label {
+        font-size: 18px;
+        text-align: left;
+        width: 250px;
+      }
+
+      input {
+        @extend .input-text;
+        margin: 0 0 10px 0;
+        width: 245px;
+      }
+
+      select {
+        @extend .input-text;
+        margin: 0;
+        width: 250px;
+      }
+
+      .input {
+        margin-left: 0;
+      }
+
+      .button {
+        background-color: $strong-raspberry;
+        disply: block;
+        float: none;
+        color: $white;
+        font-size: 30px;
+        height: 50px;
+        margin-top: 10px;
+        width: 250px;
+      }
+
+    }
 
     p {
-      @include arial-font($dark-grey, 11px, none);
+      @include arial-font($dark-gray, 11px, none);
       margin: 0 0 10px 20px;
 
       &.info {
@@ -79,78 +170,6 @@
         margin-bottom: 0 5px 5px 20px;
         padding-bottom: 20px;
       }
-    }
-
-    ul {
-
-      &.info {
-        @include column-base;
-        font-size: 11px;
-        width: 125px;
-
-        li {
-          border-bottom: 1px solid $grey;
-          padding: 10px 0;
-
-          span {
-            @include arial-font($very-dark-persian-blue, 11px);
-            display: block;
-          }
-        }
-      }
-
-      &.colores {
-        @include column-base;
-        text-align: right;
-        width: 85px;
-
-        li {
-          @include terminal-font(normal, $white, 12px);
-          margin-top: 5px;
-          padding: 0 5px 0 0;
-
-          a{
-            @include terminal-font(normal, $white, 12px);
-          }
-
-          span {
-            @include terminal-font(semi-bold, $white, 60px);
-          }
-
-          &.comenta {
-            background-color: $moderate-red;
-            height: 35px;
-            padding-top: 5px;
-          }
-
-          &.votos {
-            background-color: $light-vermilion;
-            height: 75px;
-          }
-
-          &.comentarios {
-            background-color: $light-gamboge;
-            height: 75px;
-          }
-        }
-      }
-    }
-  }
-
-  .main-banner {
-    @include column(24, true);
-    background-color: $white;
-    margin: 20px 0 20px 0;
-
-    img {
-      margin-left: 15px;
-    }
-
-    .pie-de-banner {
-      @include terminal-font(normal, #000000, 18px);
-      float: right;
-      width: 450px;
-      margin: 10px 0 20px 0;
     }
   }
 }
