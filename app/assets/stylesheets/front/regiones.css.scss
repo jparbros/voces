@@ -43,14 +43,14 @@ html {
         text-align: center;
 
         span {
-          @include terminal-font(none, $grey, 14px);
+          @include terminal-font(none, $dark-gray, 14px);
           display: block;
         }
       }
 
       .congresistas {
         @include column-base(true);
-        border-left: 1px dashed $grey;
+        border-left: 1px dashed $dark-gray;
         padding: 0 0 0 10px;
         width: 735px;
 
@@ -69,14 +69,14 @@ html {
 
           ul {
             li {
-              @include arial-font($grey, 18px);
+              @include arial-font($dark-gray, 18px);
               float: left;
               height: 50px;
               margin: 0 20px 0 0;
 
               &:last-child {
                 @include column(8);
-                border-left: 1px dashed $grey;
+                border-left: 1px dashed $dark-gray;
                 font-size: 13px;
                 font-style: italic;
                 margin: 0;

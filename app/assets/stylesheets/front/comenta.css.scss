@@ -42,7 +42,7 @@ html {
       width: 670px;
 
       .content {
-        @include arial-font($very-dark-persian-blue, 13px);
+        @include arial-font($grayish-cyan-darker, 13px);
         margin: 13px 0;
         padding: 10px 10px 10px 30px;
 
@@ -54,7 +54,7 @@ html {
 
           span {
             &.author { font-weight: bold; text-transform: none; }
-            &.representante { color: $very-dark-persian-blue; text-transform: none;}
+            &.representante { color: $grayish-cyan-darker; text-transform: none;}
           }
         }
 

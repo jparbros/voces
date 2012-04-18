@@ -41,6 +41,7 @@
       .form-inputs {
         display: inline;
         float: left;
+        font-size: 10px;
         width: 400px;
 
         label {
@@ -72,9 +73,9 @@
 
   .pagination {
     float: right;
-    .active a { background-color: $light-gamboge; }
+    .active a { background-color: $moderate-red; }
     a {
-     &:hover { background-color: $light-vermilion; }
+     &:hover { background-color: $strong-raspberry; }
     }
   }
 }
@@ -185,7 +186,7 @@ article {
 
         li {
           @include terminal-font(none, $dark-gray, 13px);
-          border: 1px solid $grey-2;
+          border: 1px solid $dark-gray;
           float: left;
           height: 24px;
           margin: -1px 0 0 1px;
@@ -244,8 +245,8 @@ article {
       &.votaciones-detalles, &.votaciones-logos {
         @include column-base(true);
         margin-top: 10px;
-        border-bottom: 1px solid $grey-2;
-        border-top: 1px solid $grey-2;
+        border-bottom: 1px solid $dark-gray;
+        border-top: 1px solid $dark-gray;
         width: 610px;
 
 
@@ -567,7 +568,7 @@ article {
           &.numero_iniciativa {
             background-color: $light-gray;
 
-            span { font-size: 20px;}
+            span { font-size: 15px;}
           }
 
           &.share {

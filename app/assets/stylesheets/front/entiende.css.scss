@@ -35,8 +35,8 @@ html {
 
       ul {
         @include column(24, true);
-        border-top: 1px solid $light-amberish-gray;
-        border-bottom: 1px solid $light-amberish-gray;
+        border-top: 1px solid $strong-raspberry;
+        border-bottom: 1px solid $strong-raspberry;
 
         li {
           @include column(5);

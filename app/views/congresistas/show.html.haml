@@ -20,7 +20,7 @@
     - @representante.topics.each do |topic|
       %li
         = link_to topic.name, search_representative_path( :search => {:topic => topic.name})
-    = "Temas de interes no disponibles" if @representante.topics
+    = "Temas de interes no disponibles" if @representante.topics.blank?
 
 .congresista_content
   %article

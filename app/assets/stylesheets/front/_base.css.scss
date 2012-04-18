@@ -64,7 +64,7 @@ h2 {
   &.estrella {
     @include oswald-font($dark-gray, 18px);
     background: url('/assets/front/star-blue.png') no-repeat;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid $dark-gray;
     padding-left: 30px;
   }
 
