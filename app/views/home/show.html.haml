@@ -58,61 +58,18 @@
             = "#{@iniciativa.official_percentage_down}%"
 
 
-    .span5
+    .span5.monitoreados
       %h2
-        - if @iniciativa.main
-          La propuesta destacada
-        - else
-          La propuesta mas vista
-      %p.info
-        = I18n.localize(@iniciativa.presented_at, :format => :month_year)
-        %br
-        Propuesta por:
-        %span
-          = (@iniciativa.representative)? link_to(@iniciativa.representative.try(:name), congresista_path(@iniciativa.representative)) : ''
+        Congresistas monitoreados
+      - @representantes.each do |representante|
+        = link_to image_tag(representante.photo(:thumb)), congresista_path(representante)
 
-      %p.description
-        = link_to @iniciativa.title, iniciativa_path(@iniciativa)
-
-      %ul.colores
-        %li.comenta
-          Vota
-          %br
-          Comenta
-        %li.votos
-          %span
-            = @iniciativa.total_votes
-          %br
-          votos
-        %li.comentarios
-          %span
-            = @iniciativa.comments.count
-          %br
-          comentarios
-
-      %ul.info
-        %li
-          Etapa del proyecto de ley
-          %span= @iniciativa.state_formated
-        %li
-          Votaci&oacute;n 131 voces
-          %span
-            A favor:
-            = "#{@iniciativa.percentage_votes_up}%"
-          %span
-            En contra:
-            = "#{@iniciativa.percentage_votes_down}%"
-        %li
-          Votaci&oacute;n oficial
-          %span
-            A favor:
-            = "#{@iniciativa.official_percentage_up}%"
-          %span
-            En contra:
-            = "#{@iniciativa.official_percentage_down}%"
+        %h2
+          Acerca de 131 voces
+        = link_to image_tag('/assets/front/' + @imagenes.shuffle.first), cms_html_path('acerca-de'), class: 'acerca-de-image'
 
   %aside.span5
-    %h2 Integrantes del congreso
+    %h2 Integrantes del Congreso
     = form_tag search_representative_path, :method => :post do
       = label_tag :buscar_por_nombre
       %br

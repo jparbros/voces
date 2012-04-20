@@ -6,7 +6,7 @@ class RepresentativeSearch
     @representatives ||= find_representatives conditions, page
   end
 
-  def find_representatives(conditions, current_page)
+  def find_representatives(conditions, current_page = 1)
     @representative_search = Representative
     if conditions
       find_by_name conditions[:name] if conditions[:name]

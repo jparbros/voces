@@ -9,6 +9,11 @@
     = form.text_field :last_name, :class => 'xxlarge'
 
 .clearfix
+  = form.label :monitoreando
+  .input
+    = form.check_box :following
+
+.clearfix
   = form.label :posicion
   .input
     = form.text_field :position, :class => 'xxlarge'

@@ -246,13 +246,10 @@ html {
         margin-right: 10px;
 
         li {
-          border-bottom: 1px solid $dark-gray;
+          background: url('/assets/front/bullet.png') no-repeat;
+          border: 0;
           margin: 10px 0;
-          padding: 0 0 5px;
-
-          &:last-child {
-            border-bottom: 0;
-          }
+          padding: 0 0 5px 20px;
         }
       }
 

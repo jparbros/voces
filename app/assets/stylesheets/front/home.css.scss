@@ -24,11 +24,20 @@
     }
 
     div {
+
+      &.monitoreados {
+        text-align: center;
+      }
+
       background: $white;
       margin: 0;
       padding: 10px 10px 0 15px;
 
-      h2 { margin-left: 0px;}
+      h2 { margin-left: 0px; border: 0; text-align: left;}
+
+      a.acerca-de-image {
+        img { margin: 0 0 10px; height: 120px;}
+      }
 
     }
 

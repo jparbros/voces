@@ -29,11 +29,17 @@ class Representative < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   #
+  # Pagination
+  #
+  paginates_per 500
+
+  #
   # scopes
   #
   scope :by_region, lambda {|region_id| where(:region_id => region_id)}
   scope :by_commission, lambda {|commission_id| joins(:commissions).where('commissions_representatives.commission_id = ?', commission_id)}
   scope :most_commented, order('comments_count DESC')
+  scope :monitoreados, where(following: true)
 
   #
   # Delegates

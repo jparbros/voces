@@ -194,14 +194,14 @@ article {
           text-align: center;
           width: 93px;
 
-          &.presentation { background-color: $light-cyan; color: $white;}
-          &.commission { background-color: $grayish-cyan; color: $white; }
-          &.plenary { background-color: $grayish-cyan-dark; color: $white; }
-          &.project { background-color: $grayish-cyan-darker; color: $white; }
-
           &:first-child {
             @extend .first-child;
           }
+
+          &.presentation { background-color: $light-cyan; color: $white !important;}
+          &.commission { background-color: $grayish-cyan; color: $white !important; }
+          &.plenary { background-color: $grayish-cyan-dark; color: $white !important; }
+          &.project { background-color: $grayish-cyan-darker; color: $white !important; }
         }
       }
 
@@ -219,6 +219,7 @@ article {
           &.a-favor {
             background-color: $light-cyanish-gray;
             border-top: 1px solid $dark-gray;
+            color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
@@ -277,7 +278,7 @@ article {
         border-top: 1px solid $dark-gray;
 
         li {
-          @include terminal-font(none, $dark-gray, 13px);
+          @include terminal-font(none, $white, 13px);
           float: left;
           height: 24px;
           margin: -1px 0 0;
@@ -293,6 +294,7 @@ article {
           &.a-favor {
             background-color: $light-cyanish-gray;
             border-top: 1px solid $dark-gray;
+            color: #fff;
             min-width: 57px;
             max-width: 327px;
           }
@@ -307,6 +309,7 @@ article {
 
           &.no-votada {
             border: 1px solid $dark-gray;
+            color: #707070;
             width: 190px;
           }
 
@@ -456,6 +459,7 @@ article {
             &.a-favor {
               background-color: $dark-gray;
               border-top: 1px solid $dark-gray;
+              color: #fff;
               min-width: 57px;
               max-width: 327px;
             }
@@ -497,6 +501,7 @@ article {
             &.a-favor {
               background-color: $dark-gray;
               border-top: 1px solid $dark-gray;
+              color: #fff;
               min-width: 57px;
               max-width: 327px;
             }

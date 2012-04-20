@@ -5,11 +5,11 @@
     %h2
       twitter
     .tweet
-      
-  
+
+
   %article
     %h2 envianos tus comentarios
-    
+
     = form_for @contacto, :url => '/contacto', :method => :post do |form|
       %p
         = form.text_field :nombre, :placeholder => 'nombre', :class => 'xlarge input-text'
@@ -21,13 +21,13 @@
         = form.text_area :comentario, :placeholder => 'comentario', :class => 'xxlarge input-text'
 
       = hidden_field_tag :other_email
-    
+
       = submit_tag 'Enviar', :class => 'submit'
-      
+
 <script>
 jQuery(function($){
 $(".tweet").tweet({
-username: "jparbros",
+username: "131voces",
 count: 10,
 loading_text: "cargando tweets...",
 template: "{text}"

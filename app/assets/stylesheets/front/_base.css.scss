@@ -57,7 +57,7 @@ h1 {
 
 h2 {
   @include oswald-font($dark-grayish-cyan, 18px);
-  border-bottom: 1px solid $dark-grayish-cyan;
+  border-bottom: 0;
   margin: 20px 10px 10px 20px;
   padding: 0 0 5px;
 
