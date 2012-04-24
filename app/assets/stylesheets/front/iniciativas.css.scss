@@ -563,11 +563,19 @@ article {
           &.votos {
             background-color: $grayish-cyan;
             height: 75px;
+
+            .ie & {
+              span {display: block; padding: 25px 0 10px 0;}
+            }
           }
 
           &.comentarios {
             background-color: $light-cyan;
             height: 75px;
+
+            .ie & {
+              span {display: block; padding: 25px 0 10px 0;}
+            }
           }
 
           &.numero_iniciativa {

@@ -10,7 +10,7 @@
         = link_to image_tag(representante.photo(:thumb)), congresista_path(representante)
       .name
         = link_to representante.name, congresista_path(representante)
-    %li
+    %li.last-child
       = representante.position
       |
       = representante.region_name if representante.region
@@ -24,6 +24,6 @@
       Iniciativas
     %li
       Comentarios
-    %li
+    %li.last-child
       = representante.comments_count
   .bottom &nbsp;

@@ -48,5 +48,6 @@ $(document).ready(function(){
       $(this).parent().submit();
 
   });
+
 });
 

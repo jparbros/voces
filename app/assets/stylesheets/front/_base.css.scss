@@ -6,7 +6,10 @@
 
 body > .container, .container-fluid { padding-top: 50px !important}
 
-html { background: url("/assets/front/header-bk.png") repeat-x, url("/assets/front/background.png") repeat; }
+html {
+  background: url("/assets/front/background.png") repeat;
+  background: url("/assets/front/header-bk.png") repeat-x, url("/assets/front/background.png") repeat;
+}
 
 body {
   @include oswald-font($dark-gray, 14px);
@@ -17,6 +20,13 @@ a {
   @include oswald-font($dark-gray, 14px);
 }
 
+.ie #container { margin-top: -140px;}
+
+.ie #div-header {
+  background: url(/assets/front/header-bk.png) repeat-x 0px 0px;
+  height: 140px;
+  width: 100%;
+}
 
 .first {
   margin-left: 0;

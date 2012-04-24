@@ -114,7 +114,7 @@ html {
                 img { margin: 10px 5px 0;}
               }
 
-              &:last-child {
+              &.last-child {
                 border: 0;
                 font-size: 12px;
                 padding: 10px 0 10px 10px;
@@ -163,7 +163,7 @@ html {
                 }
               }
 
-              &:last-child {
+              &.last-child {
                 background-color: $grayish-cyan;
                 border-top: 1px solid $grayish-cyan;
                 color: white;

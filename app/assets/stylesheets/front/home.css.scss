@@ -27,6 +27,8 @@
 
       &.monitoreados {
         text-align: center;
+
+        .ie & {margin-left: 30px;}
       }
 
       background: $white;
@@ -89,11 +91,19 @@
           &.votos {
             background-color: $grayish-cyan;
             height: 75px;
+
+            .ie & {
+              span {padding-top: 20px; display: block;}
+            }
           }
 
           &.comentarios {
             background-color: $light-cyan;
             height: 75px;
+
+            .ie & {
+              padding-top: 20px;
+            }
           }
         }
       }

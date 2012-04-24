@@ -10,7 +10,9 @@
     = csrf_meta_tag
 
 
-  %body
+  %body{:class => detect_browser_os}
+    /[if IE]
+      %div{id: 'div-header'}
     #container
       %header
         = link_to image_tag('front/logo.png'), root_path
