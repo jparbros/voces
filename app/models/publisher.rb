@@ -2,7 +2,7 @@ class Publisher
 
   def initialize(message_complete)
     @message_complete = message_complete
-    @url = 'http://voces.heroku.com'
+    @url = 'http://www.131voces.pe'
   end
 
   def publish
