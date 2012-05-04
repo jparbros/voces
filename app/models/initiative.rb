@@ -41,8 +41,9 @@ class Initiative < ActiveRecord::Base
   STATES = {
     :commission => 'En comisión',
     :dictum => 'Dictamen',
-    :debate_in_plenary => 'Debate en Pleno',
-    :promulgation_and_enforcement => 'Promulgación y vigencia'
+    :debate_in_plenary => 'En el Pleno',
+    :promulgation_and_enforcement => 'Ley',
+    :archived => 'Archivado'
   }
 
   #
@@ -53,6 +54,7 @@ class Initiative < ActiveRecord::Base
     state :dictum
     state :debate_in_plenary
     state :promulgation_and_enforcement
+    state :archived
   end
 
 
@@ -176,6 +178,10 @@ class Initiative < ActiveRecord::Base
 
   def projected?
      self.state == 'promulgation_and_enforcement'
+  end
+
+  def archived?
+    self.state == 'archived'
   end
 
   def official_votes_printable

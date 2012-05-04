@@ -22,11 +22,13 @@ class RepresentativeSearch
   private
 
   def find_by_name(name)
-    @representative_search = @representative_search.where('representatives.first_name iLIKE ? OR representatives.last_name iLIKE ?',"%#{name}%","%#{name}%") if name
+    name.split(' ').each do |query|
+      @representative_search = @representative_search.where('representatives.first_name @@ :q OR representatives.last_name @@ :q', q: query)
+    end
   end
 
   def find_by_initial(initial)
-    @representative_search = @representative_search.where('representatives.last_name iLIKE ?',"#{initial}%") if initial
+    @representative_search = @representative_search.where('representatives.last_name iLike ?',"#{initial}%") if initial
   end
 
   def find_by_state state

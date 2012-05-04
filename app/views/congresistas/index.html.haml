@@ -10,6 +10,6 @@
     %ul.iniciales
       - ('A'..'Z').to_a.each do |initial|
         %li= link_to initial, search_representative_path(:search => {:initial => initial})
-    %h2 Integrantes m&aacute;s comentados
+    %h2 Congresistas m&aacute;s comentados
 
   = render :partial => 'representante', :collection => @representantes

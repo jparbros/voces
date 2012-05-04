@@ -24,31 +24,33 @@ class InitiativeSearch
   private
 
   def find_by_title(title_to_find)
-    @initiative_search = @initiative_search.where('title iLIKE ?',"%#{title_to_find}%") if title_to_find
+    @initiative_search = @initiative_search.where('title @@ :q', q: title_to_find) if title_to_find
   end
 
   def find_by_description(description_to_find)
-    @initiative_search = @initiative_search.where('description iLIKE ?',"%#{description_to_find}%") if description_to_find
+    @initiative_search = @initiative_search.where('description @@ :q', q: description_to_find) if description_to_find
   end
 
   def find_by_topic_name topic_name
-    @initiative_search = @initiative_search.joins(:topics).where('topics.name iLIKE ?',"%#{topic_name}%") if topic_name
+    @initiative_search = @initiative_search.joins(:topics).where('topics.name @@ :q', q: topic_name) if topic_name
   end
 
   def find_by_representative representative_name
-    @initiative_search = @initiative_search.joins(:representative).where('representatives.name iLIKE ?',"%#{representative_name}%") if representative_name
+    @initiative_search = @initiative_search.joins(:representative).where('representatives.name @@ :q', q: representative_name) if representative_name
   end
 
   def find_by_keywords keywords
-    @initiative_search = @initiative_search.joins(:representative).joins(:topics).where('initiatives.title iLIKE ? OR initiatives.description iLIKE ? OR representatives.first_name iLIKE ? OR representatives.last_name iLIKE ? OR topics.name iLIKE ?',"%#{keywords}%", "%#{keywords}%", "%#{keywords}%","%#{keywords}%","%#{keywords}%") if keywords
+    keywords.split(' ').each do |query|
+       @initiative_search = @initiative_search.joins(:representative).joins(:topics).where('initiatives.title @@ :q OR initiatives.description @@ :q OR representatives.first_name @@ :q OR representatives.last_name @@ :q OR topics.name @@ :q', q: query)
+    end
   end
 
   def find_by_region(region_name)
-    @initiative_search = @initiative_search.joins(:representative => :region).where('regions.name iLIKE ?',"%#{region_name}%") if region_name
+    @initiative_search = @initiative_search.joins(:representative => :region).where('regions.name @@ :q', q: region_name) if region_name
   end
 
   def find_by_political_party(political_party_name)
-    @initiative_search = @initiative_search.joins(:representative => :political_party).where('political_parties.name iLIKE ?',"%#{political_party_name}%") if political_party_name
+    @initiative_search = @initiative_search.joins(:representative => :political_party).where('political_parties.name @@ :q', q: political_party_name) if political_party_name
   end
 
   def find_by_date(month, year)

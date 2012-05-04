@@ -77,7 +77,7 @@
 
       %label
         Circunscripci&oacute;n electoral
-      = select_tag 'search[state]', options_for_select(Region.all.collect {|region| [region.name, region.id]}), :include_blank => true
+      = select_tag 'search[state]', options_for_select(Region.all.collect {|region| [region.name.titleize, region.id]}), :include_blank => true
       = submit_tag 'Buscar', :class => :button
     = image_tag 'front/home-peru.png', :usemap => '#peru'
 

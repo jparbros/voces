@@ -10,10 +10,14 @@ module IniciativasHelper
   def estado_de_iniciativa(iniciativa)
     list = []
     list << content_tag(:li, 'Etapa del proyecto')
-    list << content_tag(:li, 'En comisión', :id => "presentacion_#{iniciativa.id}", :class => iniciativa.presented? ? 'presentation' : '')
-    list << content_tag(:li, 'Dictamen', :id => "comision_#{iniciativa.id}", :class => iniciativa.commissioned? ? 'commission' : '')
-    list << content_tag(:li, 'Debate en Pleno', :id => "en_pleno_#{iniciativa.id}", :class => iniciativa.plenaried? ? 'plenary' : '')
-    list << content_tag(:li, 'Promulgación y vigencia', :id => "proyecto_#{iniciativa.id}", :class => iniciativa.projected? ? 'project' : '')
+    if iniciativa.archived?
+      list << content_tag(:li, 'Archivado', :id => "archivado_#{iniciativa.id}", :class => 'archived')
+    else
+      list << content_tag(:li, 'En comisión', :id => "presentacion_#{iniciativa.id}", :class => iniciativa.presented? ? 'presentation' : '')
+      list << content_tag(:li, 'Dictamen', :id => "comision_#{iniciativa.id}", :class => iniciativa.commissioned? ? 'commission' : '')
+      list << content_tag(:li, 'Debate en Pleno', :id => "en_pleno_#{iniciativa.id}", :class => iniciativa.plenaried? ? 'plenary' : '')
+      list << content_tag(:li, 'Promulgación y vigencia', :id => "proyecto_#{iniciativa.id}", :class => iniciativa.projected? ? 'project' : '')
+    end
     concat raw(content_tag(:ul, raw(list.join('')), :class => :estado))
   end
 
@@ -46,15 +50,15 @@ module IniciativasHelper
     when 'presentation'
       'Fecha en que la Mesa Directiva de la Cámara turna la iniciativa a las comisiones, para su estudio, discusión y dictaminación.'
     when 'commission'
-      'En esta etapa se analiza y se discute el contenido de la iniciativa, para hacer un dictamen o desecharla.'
-    when 'plenary'
-      'El dictamen preparado por la comisión correspondiente se presenta ante todos los diputados para su discusión y aprobación o descarte.'
-    when 'project'
-      'El dictamen se convierte en proyecto y pasa a la cámara revisora. Si es una minuta, se envía al Ejecutivo.'
-    when 'rejected_by_commission'
-      'El dictamen fue rechazado por la comision.'
-    when 'rejected_by_board'
-      'El dictamen fue rechazado por la mesa directiva.'
+      'Inmediatamente después que un proyecto de ley ha sido presentado según las normas constitucionales y reglamentarias, es enviado a una o varias Comisiones ordinarias.'
+    when 'dictum'
+      'El proyecto de ley ha sido estudiado y debatido por las Comisiones ordinarias, las que han elaborado y presentado dictamen (informe sobre el proyecto).'
+    when 'debate_in_plenary'
+      'El proyecto, que ya cuenta con dictamen o es exonerado de él, pasa al Pleno del Congreso para su debate y votación.'
+    when 'promulgation_and_enforcement'
+      'Si el Presidente de la República promulga la ley sin observaciones la manda publicar y entra en vigencia y se integra al ordenamiento jurídico nacional como nueva ley.'
+    when 'archived'
+      'El proyecto de ley es archivado cuando es rechazado de plano por la Comisiones ordinarios o cuando, sometida a votación, es rechazada por el Pleno.'
     end
   end
 end

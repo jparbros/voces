@@ -22,7 +22,7 @@ class Admin::RegionsController < Admin::BaseController
   end
 
   def update
-    @region = PoliticalParty.find(params[:id])
+    @region = Region.find(params[:id])
     if @region.update_attributes(params[:region])
       redirect_to admin_regions_url, :notice => "Circunscripcion editada exitosamente"
     else
