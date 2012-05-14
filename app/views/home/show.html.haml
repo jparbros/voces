@@ -64,9 +64,9 @@
       - @representantes.each do |representante|
         = link_to image_tag(representante.photo(:thumb)), congresista_path(representante)
 
-        %h2
-          Acerca de 131 voces
-        = link_to image_tag('/assets/front/' + @imagenes.shuffle.first), cms_html_path('acerca-de'), class: 'acerca-de-image'
+      %h2
+        Acerca de 131 voces
+      = link_to image_tag('/assets/front/' + @imagenes.shuffle.first), cms_html_path('acerca-de'), class: 'acerca-de-image'
 
   %aside.span5
     %h2 Integrantes del Congreso
@@ -89,7 +89,8 @@
   %area{:shape => "poly", :title => "Arequipa", :coords => "207,344,140,309,145,301,159,310,165,305,174,307,180,301,182,294,190,294,195,296,199,293,202,299,214,302,219,306,220,321,208,332,211,339", :href => "#{search_representative_path(:search => {:state => 4})}", :target => "_self", :alt => "Arequipa"}
   %area{:shape => "poly", :title => "Ayacucho", :coords => "150,244,149,253,153,255,155,262,144,268,147,279,142,282,141,292,146,301,159,309,165,305,172,306,180,299,182,295,178,292,170,296,168,282,164,266,177,268,164,258,165,253,162,247", :href => "#{search_representative_path(:search => {:state => 5})}", :target => "_self", :alt => "Ayacucho"}
   %area{:shape => "poly", :title => "Cajamarca", :coords => "83,68,69,92,71,106,66,123,83,140,83,146,88,146,86,135,93,138,99,133,96,128,92,128,89,120,90,115,87,104,91,84", :href => "#{search_representative_path(:search => {:state => 6})}", :target => "_self", :alt => "Cajamarca"}
-  %area{:shape => "poly", :title => "Callao", :coords => "100,237,108,241,107,245,104,250,100,245", :href => "#{search_representative_path(:search => {:state => 7})}", :target => "_self", :alt => "Callao"}
+  %area{:shape => "poly", :title => "Lima", :coords => "100,237,108,241,107,243,106,250,104,245", :href => "#{search_representative_path(:search => {:state => 15})}", :target => "_self", :alt => "Callao"}
+  %area{:shape => "poly", :title => "Callao", :coords => "105,243,98,247,105,250", :href => "#{search_representative_path(:search => {:state => 7})}", :target => "_self", :alt => "Callao"}
   %area{:shape => "poly", :title => "Cuzco", :coords => "195,228,171,228,166,235,171,239,163,249,176,269,183,269,197,277,199,284,189,290,189,293,198,293,202,299,214,301,217,306,218,297,214,294,220,280,224,275,231,263,228,262,218,263,201,257,196,245,190,238", :href => "#{search_representative_path(:search => {:state => 8})}", :target => "_self", :alt => "Cuzco"}
   %area{:shape => "poly", :title => "Huancavelica", :coords => "152,243,140,242,139,249,129,263,128,269,132,270,132,277,141,282,147,281,147,275,143,268,147,268,155,263,153,255,148,251", :href => "#{search_representative_path(:search => {:state => 9})}", :target => "_self", :alt => "Huancavelica"}
   %area{:shape => "poly", :title => "Huánuco", :coords => "129,192,122,177,119,177,117,173,114,176,108,175,105,177,97,176,100,183,108,187,103,192,103,197,101,201,105,210,108,212,113,206,125,212,127,210,125,204,128,200,150,198,146,190,149,179,149,176,146,176,138,185", :href => "#{search_representative_path(:search => {:state => 10})}", :target => "_self", :alt => "Huánuco"}
@@ -97,7 +98,7 @@
   %area{:shape => "poly", :title => "Junín", :coords => "150,219,133,218,126,221,117,221,117,224,112,224,120,237,124,243,127,243,132,255,141,247,140,245,152,244,162,247,167,244,171,237,165,235,171,228,169,220,164,218,160,222,151,222", :href => "#{search_representative_path(:search => {:state => 12})}", :target => "_self", :alt => "Junín"}
   %area{:shape => "poly", :title => "La Libertad", :coords => "55,146,50,150,69,183,79,179,88,167,97,176,105,175,100,172,104,167,97,167,91,153,84,159,68,156,63,158", :href => "#{search_representative_path(:search => {:state => 13})}", :target => "_self", :alt => "La Libertad"}
   %area{:shape => "poly", :title => "Lambayeque", :coords => "44,117,43,124,31,134,46,144,49,150,56,146,60,141,55,136,59,128,52,127", :href => "#{search_representative_path(:search => {:state => 14})}", :target => "_self", :alt => "Lambayeque"}
-  %area{:shape => "poly", :title => "Lima", :coords => "88,215,91,232,101,238,108,241,107,247,103,248,117,269,128,260,131,255,129,245,121,241,107,211,104,210,93,218", :href => "#{search_representative_path(:search => {:state => 15})}", :target => "_self", :alt => "Lima"}
+  %area{:shape => "poly", :title => "Lima Provincias", :coords => "88,215,91,232,101,238,108,241,107,247,103,248,117,269,128,260,131,255,129,245,121,241,107,211,104,210,93,218", :href => "#{search_representative_path(:search => {:state => 26})}", :target => "_self", :alt => "Lima"}
   %area{:shape => "poly", :title => "Loreto", :coords => "127,11,135,29,114,56,85,69,92,94,87,105,91,116,110,127,113,125,132,131,129,144,125,139,120,146,128,168,123,170,122,177,131,171,133,166,147,163,148,151,160,155,166,144,172,139,179,139,175,126,182,120,180,110,201,98,228,92,236,96,239,91,232,83,224,82,238,61,217,53,201,52,191,57,179,57,177,47,170,43,171,37,153,28,153,19,134,7", :href => "#{search_representative_path(:search => {:state => 16})}", :target => "_self", :alt => "Loreto"}
   %area{:shape => "poly", :title => "Madre de Dios", :coords => "228,198,221,206,220,212,196,223,190,241,201,251,205,259,232,263,246,270,257,261,263,252,248,224,239,217,232,221,227,221", :href => "#{search_representative_path(:search => {:state => 17})}", :target => "_self", :alt => "Madre de Dios"}
   %area{:shape => "poly", :title => "Moquegua", :coords => "219,318,217,326,208,334,210,340,208,344,209,352,215,352,228,337,228,334,230,334,234,331,227,326,227,319", :href => "#{search_representative_path(:search => {:state => 18})}", :target => "_self", :alt => "Moquegua"}
