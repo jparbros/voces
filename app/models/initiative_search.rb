@@ -36,7 +36,9 @@ class InitiativeSearch
   end
 
   def find_by_representative representative_name
-    @initiative_search = @initiative_search.joins(:representative).where('representatives.name @@ :q', q: representative_name) if representative_name
+    representative_name.split(' ').each do |query|
+      @representative_search = @representative_search.where('representatives.first_name @@ :q OR representatives.last_name @@ :q', q: query) if representative_name
+    end
   end
 
   def find_by_keywords keywords
