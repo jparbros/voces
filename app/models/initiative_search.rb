@@ -37,7 +37,7 @@ class InitiativeSearch
 
   def find_by_representative representative_name
     representative_name.split(' ').each do |query|
-      @initiative_search = @initiative_search.includes(:representatives).where('representatives.first_name @@ :q OR representatives.last_name @@ :q', q: query) if representative_name
+      @initiative_search = @initiative_search.includes(:representative).where('representatives.first_name @@ :q OR representatives.last_name @@ :q', q: query) if representative_name
     end
   end
 
