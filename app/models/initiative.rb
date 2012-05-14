@@ -28,7 +28,7 @@ class Initiative < ActiveRecord::Base
   #
   scope :main, where(:main => true)
   scope :most_commented, order('comments_count DESC').limit(1)
-  default_scope order('position ASC')
+  default_scope order('initiatives.position ASC')
 
   #
   # Pagination
