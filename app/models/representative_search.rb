@@ -24,7 +24,7 @@ class RepresentativeSearch
 
   def find_by_name(name)
     name.split(' ').each do |query|
-      @representative_search = @representative_search.where('translate(representatives.first_name, "áéíóú", "aeiou") @@ :q OR translate(representatives.last_name, "áéíóú", "aeiou") @@ :q', q: query)
+      @representative_search = @representative_search.where('representatives.first_name @@ :q OR representatives.last_name @@ :q', q: query)
     end
   end
 
