@@ -20,7 +20,8 @@
       %p
         = form.text_area :comentario, :placeholder => 'comentario', :class => 'xxlarge input-text'
 
-      = hidden_field_tag :other_email
+      .other-email
+        = text_field_tag :other_email
 
       = submit_tag 'Enviar', :class => 'submit'
 
