@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class RepresentativeSearch
 
   attr_accessor :representatives
