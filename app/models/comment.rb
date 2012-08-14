@@ -37,7 +37,7 @@ class Comment < ActiveRecord::Base
 
   def publish
     publisher = Publisher.new(self.comment)
-    publisher.publish
+    publisher.publish unless self.spam?
   end
 
   def send_email
