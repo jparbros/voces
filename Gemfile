@@ -27,6 +27,7 @@ gem 'mail'
 gem 'typhoeus'
 gem 'comfortable_mexican_sofa'
 gem 'detect_browser_os'
+gem 'defender'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'

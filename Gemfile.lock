@@ -64,6 +64,11 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     crack (0.3.1)
+    defender (2.0.3)
+      activemodel (>= 3.0.0)
+      defensio (~> 0.9.1)
+    defensio (0.9.1)
+      httparty (>= 0.5.0)
     detect_browser_os (0.1.1)
     devise (2.0.0)
       bcrypt-ruby (~> 3.0)
@@ -267,6 +272,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   comfortable_mexican_sofa
   compass (~> 0.12.alpha)
+  defender
   detect_browser_os
   devise
   fog

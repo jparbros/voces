@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120420023419) do
+ActiveRecord::Schema.define(:version => 20120814054952) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -159,6 +159,9 @@ ActiveRecord::Schema.define(:version => 20120420023419) do
     t.string   "email"
     t.integer  "tendency"
     t.integer  "reply_to"
+    t.boolean  "spam"
+    t.string   "defensio_sig"
+    t.float    "spaminess"
   end
 
   create_table "commissions", :force => true do |t|
