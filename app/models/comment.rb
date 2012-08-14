@@ -41,7 +41,7 @@ class Comment < ActiveRecord::Base
   end
 
   def send_email
-    Comentario.send_email(self.author, self).deliver if self.commentable_type == 'Representative'
+    Comentario.send_email(self.author, self).deliver if self.commentable_type == 'Representative' && !self.spam?
   end
 
   def replies
