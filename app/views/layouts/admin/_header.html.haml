@@ -1,14 +1,13 @@
-%header
-  .topbar
-    .fill
-      .container
-        %h3= link_to '131 Voces', '/admin'
-        %ul
-          %li= link_to 'Iniciativas', admin_initiatives_path
-          %li= link_to 'Temas', admin_topics_path
-          %li= link_to 'Grupo Parlamentario', admin_political_parties_path
-          %li= link_to 'Representantes', admin_representatives_path
-          %li= link_to 'Circunscripciones Electoral', admin_regions_path
-          %li= link_to 'Comisiones', admin_commissions_path
-          %li= link_to 'Usuarios', admin_admins_path
-          %li= link_to 'CMS', cms_admin_path
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %ul.nav
+        %li= link_to 'Iniciativas', admin_initiatives_path
+        %li= link_to 'Temas', admin_topics_path
+        %li= link_to 'Grupo Parlamentario', admin_political_parties_path
+        %li= link_to 'Representantes', admin_representatives_path
+        %li= link_to 'Circunscripciones Electoral', admin_regions_path
+        %li= link_to 'Comisiones', admin_commissions_path
+        %li= link_to 'Usuarios', admin_admins_path
+        %li= link_to 'Comentarios', admin_comments_path
+        %li= link_to 'CMS', cms_admin_path

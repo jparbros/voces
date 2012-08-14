@@ -1,0 +1,46 @@
+.page-header
+  %h1 Comentarios
+
+
+%ul.nav.nav-tabs
+  %li
+    %a{'href' => '#tab1', 'data-toggle' => "tab"}
+      Comentario
+  %li
+    %a{'href' => '#tab2', 'data-toggle' => "tab"}
+      Spam
+
+.tab-content
+  .tab-pane#tab1
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th
+            = '#'
+          %th
+            Autor
+          %th
+            Comentario
+          %th
+            Acciones
+      %tbody
+        - @comments.each do |comment|
+          %tr
+            %td
+              = comment.id
+            %td
+              = comment.author
+            %td
+              = comment.comment
+            %td
+              = link_to 'Marcar como Spam', toggle_spam_admin_comment_path(comment)
+  .tab-pane#tab2
+    %h2 Tab 2
+
+%script
+  $('ul.nav-tabs a:last').tab('show');
+  $('ul.nav-tabs a:first').tab('show');
+  $('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target
+  e.relatedTarget
+  })

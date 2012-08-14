@@ -12,6 +12,12 @@ Congresspedia::Application.routes.draw do
     resources :commissions
     resources :admins
     resources :regions
+    resources :comments, :only => [:index] do
+      member do
+        get 'check_spam'
+        get 'toggle_spam'
+      end
+    end
 
     root :to => "dashboard#show"
   end
