@@ -1,0 +1,31 @@
+#iniciativas
+  %h1 Comisiones
+
+  %aside
+    %h2
+      Buscar proyectos de ley
+
+    = form_tag search_initiatives_path, :method => :post do |form|
+
+      = text_field_tag 'search[keywords]', '', :placeholder => 'palabras clave', :class => 'input'
+
+      = submit_tag 'Buscar', :class => 'button'
+
+    %h2
+      Temas
+
+    .carousel
+      %ul.ul-aside
+        - @temas.each do |tema|
+          %li= link_to tema.name, tema_path(tema)
+
+  %section.container          
+    - @commissions.each do |commission|
+      %article.iniciativa
+        %h2= commission.name
+        
+        = link_to 'Ver congresistas >>', comisione_congresistas_path(commission)
+        
+        = link_to 'Ver iniciativas >>', comisione_iniciativas_path(commission)
+  
+  = paginate @commissions, window: 2
