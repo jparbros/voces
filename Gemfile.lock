@@ -45,7 +45,7 @@ GEM
     builder (3.0.0)
     carrierwave (0.5.8)
       activesupport (~> 3.0)
-    chunky_png (1.2.5)
+    chunky_png (1.2.6)
     cocaine (0.2.1)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -59,10 +59,12 @@ GEM
       active_link_to (~> 1.0.0)
       paperclip (>= 2.3.0)
       rails (>= 3.0.0)
-    compass (0.12.alpha.4)
+    compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     crack (0.3.1)
     defender (2.0.3)
       activemodel (>= 3.0.0)
@@ -94,7 +96,7 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.1)
-    fssm (0.2.8.1)
+    fssm (0.2.9)
     haml (3.1.4)
     heroku (2.19.0)
       launchy (>= 0.3.2)
@@ -271,7 +273,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.1.1)
   comfortable_mexican_sofa
-  compass (~> 0.12.alpha)
+  compass-rails
   defender
   detect_browser_os
   devise

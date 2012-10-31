@@ -28,7 +28,7 @@ gem 'typhoeus'
 gem 'comfortable_mexican_sofa'
 gem 'detect_browser_os'
 gem 'defender'
-gem 'compass', '~> 0.12.alpha'
+gem 'compass-rails'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'
