@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
+gem 'rails', '3.2.8'
 
 gem "airbrake"
 gem 'bitly'
@@ -29,10 +29,10 @@ gem 'comfortable_mexican_sofa'
 gem 'detect_browser_os'
 gem 'defender'
 gem 'compass-rails'
+gem 'sass-rails'
 
 group :assets do
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'sass-rails',   '~> 3.1.4'
+  gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
