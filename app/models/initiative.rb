@@ -70,8 +70,10 @@ class Initiative < ActiveRecord::Base
   end
 
   def presented_by_token=(id)
-    representante = Representative.find(id)
-    self.representative = representante
+    if id
+      representante = Representative.find(id)
+      self.representative = representante
+    end
   end
 
   def number_format
