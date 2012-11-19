@@ -70,7 +70,7 @@ class Initiative < ActiveRecord::Base
   end
 
   def presented_by_token=(id)
-    if id
+    if id.present?
       representante = Representative.find(id)
       self.representative = representante
     end
