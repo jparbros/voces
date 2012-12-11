@@ -1,6 +1,6 @@
 .page-header
   %h2 Editar Iniciativa ##{@initiative.number}
-= form_for [:admin, @initiative], :html => {:multipart => true} do |form|
+= form_for [:admin, @initiative], :html => {:multipart => true, class: 'form-horizontal'} do |form|
   = render "admin/shared/error_messages", :target => @initiative
   %fieldset
     = render :partial => 'form', :locals => {:form => form}

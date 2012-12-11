@@ -1,92 +1,92 @@
 %fieldset
   %legend Información
-  .clearfix
-    = form.label :id
-    .input
+  .control-group
+    = form.label :id, class: 'control-label'
+    .controls
       = form.text_field :id, :class => 'xxlarge', :disabled => :disabled
 
-  .clearfix
-    = form.label :numero
-    .input
+  .control-group
+    = form.label :numero, class: 'control-label'
+    .controls
       = form.number_field :number, :class => 'medium', :placeholder => 'Numero'
       = form.number_field :year, :class => 'medium', :placeholder => 'Año'
       = form.text_field :proponent, :class => 'medium', :placeholder => 'Proponente'
 
 
-  .clearfix
-    = form.label :titulo
-    .input
+  .control-group
+    = form.label :titulo, class: 'control-label'
+    .controls
       = form.text_field :title, :class => 'xxlarge'
 
-  .clearfix
-    = form.label :descripcion
-    .input
+  .control-group
+    = form.label :descripcion, class: 'control-label'
+    .controls
       = form.text_area :description, :class => 'xxlarge', :rows => '5'
 
-  .clearfix
-    = form.label :presentado_en
-    .input
+  .control-group
+    = form.label :presentado_en, class: 'control-label'
+    .controls
       = form.text_field :presented_at, :class => 'xxlarge'
 
-  .clearfix
-    = form.label :presentado_por
-    .input
+  .control-group
+    = form.label :presentado_por, class: 'control-label'
+    .controls
       = form.text_field :presented_by_token, "data-pre" => [{:id => @initiative.representative.try(:id), :name => @initiative.representative.try(:name)}].to_json
 
-  .clearfix
-    = form.label :temas
-    .input
+  .control-group
+    = form.label :temas, class: 'control-label'
+    .controls
       = form.text_field :topic_tokens, "data-pre" => @initiative.topics.map(&:attributes).to_json
 
-  .clearfix
-    = form.label :estado
-    .input
+  .control-group
+    = form.label :estado, class: 'control-label'
+    .controls
       = form.select :state, Initiative::STATES.to_a.each {|t| t.reverse!}
 
-  .clearfix
-    = form.label :url_proyecto_de_ley
-    .input
+  .control-group
+    = form.label :url_proyecto_de_ley, class: 'control-label'
+    .controls
       = form.text_field :additional_resources_url, :class => 'xxlarge'
 
 %fieldset
   %legend Recursos Adicionales
 
 = form.fields_for :resources do |resource_form|
-  .clearfix
-    = resource_form.label :nombre
-    .input
+  .control-group
+    = resource_form.label :nombre, class: 'control-label'
+    .controls
       = resource_form.text_field :name
 
-  .clearfix
-    = resource_form.label :url
-    .input
+  .control-group
+    = resource_form.label :url, class: 'control-label'
+    .controls
       = resource_form.text_field :url
 
 
 %fieldset
   %legend Votaciones Generales
 
-  .clearfix
-    = form.label :a_favor
-    .input
+  .control-group
+    = form.label :a_favor, class: 'control-label'
+    .controls
       = form.text_field :official_vote_up, :class => 'xxlarge'
 
-  .clearfix
-    = form.label :en_contra
-    .input
+  .control-group
+    = form.label :en_contra, class: 'control-label'
+    .controls
       = form.text_field :official_vote_down, :class => 'xxlarge'
 
-  .clearfix
-    = form.label :abstenciones
-    .input
+  .control-group
+    = form.label :abstenciones, class: 'control-label'
+    .controls
       = form.text_field :official_vote_abstentions, :class => 'xxlarge'
 
 %fieldset
   %legend Votaciones Individuales
   = form.fields_for :official_votes do |official_vote_form|
-    .clearfix
-      %label
+    .control-group
+      %label.control-label
         = image_tag(official_vote_form.object.political_party.logo.url(:thumb)) if official_vote_form.object.political_party
-      .input
+      .controls
         = official_vote_form.text_field :votes, :class => 'xxlarge'
         = official_vote_form.hidden_field :political_party_id
