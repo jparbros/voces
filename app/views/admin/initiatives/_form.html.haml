@@ -39,6 +39,12 @@
       = form.text_field :topic_tokens, "data-pre" => @initiative.topics.map(&:attributes).to_json
 
   .control-group
+    = form.label :comisiones, class: 'control-label'
+    .controls
+      = form.text_field :commission_tokens, "data-pre" => @initiative.commissions.map(&:attributes).to_json
+
+
+  .control-group
     = form.label :estado, class: 'control-label'
     .controls
       = form.select :state, Initiative::STATES.to_a.each {|t| t.reverse!}

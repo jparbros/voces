@@ -40,6 +40,12 @@ $(document).ready(function(){
       prePopulate: $("#representative_topic_tokens").data("pre"),
       crossDomain: false
   });
+  
+  $("#initiative_commission_tokens").tokenInput("/admin/commissions.json", {
+      theme: "facebook",
+      prePopulate: $("#initiative_commission_tokens").data("pre"),
+      crossDomain: false
+  });
 
   $('#initiatives_order').sortable({
     type: 'post',

@@ -21,7 +21,7 @@ class Initiative < ActiveRecord::Base
   #
   # Attributes
   #
-  attr_reader :topic_tokens, :presented_by_token
+  attr_reader :topic_tokens, :presented_by_token, :commission_tokens
 
   #
   # Scope
@@ -33,7 +33,7 @@ class Initiative < ActiveRecord::Base
   #
   # Pagination
   #
-  paginates_per 5
+  paginates_per 15
 
   #
   # States
@@ -74,6 +74,10 @@ class Initiative < ActiveRecord::Base
       representante = Representative.find(id)
       self.representative = representante
     end
+  end
+  
+  def commission_tokens=(ids)
+    self.commission_ids = ids.split(',')
   end
 
   def number_format
