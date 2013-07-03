@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery.min
+//= require jquery_ujs
 //= require jquery-ui.min
 //= require jquery.tweet
 //= require bootstrap-twipsy
