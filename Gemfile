@@ -30,11 +30,11 @@ gem 'detect_browser_os'
 gem 'defender'
 gem 'compass-rails'
 gem 'sass-rails'
+gem 'jquery-rails'
 
 group :assets do
   gem 'coffee-rails'
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-rails'
 end
 
 group :development do
