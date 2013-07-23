@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //= require jquery-ui.min
 //= require jquery.tweet
+//= require jquery.sidecontent
 //= require bootstrap-twipsy
 //= require bootstrap-modal
 //= require bootstrap-popover
@@ -50,5 +51,7 @@ $(document).ready(function(){
 
   });
 
+  $(".side").sidecontent({opacity: 1, pulloutpadding: 20});
 });
+
 

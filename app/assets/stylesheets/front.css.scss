@@ -29,3 +29,34 @@ a {
 .other-email {
   display: none;
 }
+
+.sidecontentpullout {
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;}
+
+#sidecontent_0_pullout {
+  color: #fff;
+  background: #3b5998;
+}
+
+#sidecontent_1_pullout {
+  color: #fff;
+  background: #4099FF;
+}
+
+.sidecontent {
+  background: #ffffff;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#sidecontent_0 {
+  height: 571px !important;
+}
