@@ -58,7 +58,7 @@
             = "#{@iniciativa.official_percentage_down}%"
         %li.share
           .share-fb
-            <div class="fb-send" data-href="#{iniciativa_url(@iniciativa)}"></div>
+            <div class="fb-like" data-href="#{iniciativa_url(@iniciativa)}" data-send="true" data-layout="box_count" data-width="450" data-show-faces="false"></div>
           .share-tw
             <a href="https://twitter.com/share" class="twitter-share-button" data-text="#{@iniciativa.description[0..70]}..." data-url="#{iniciativa_url(@iniciativa)}" data-lang="es" data-count="none">Twittear</a>
 
