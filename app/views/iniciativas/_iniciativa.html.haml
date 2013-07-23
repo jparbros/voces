@@ -49,7 +49,7 @@
         .share-fb
           <div class="fb-send" data-href="http://www.131voces.pe/"></div>
         .share-tw
-          <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="es">Tweet</a>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-text="#{iniciativa.description[0..70]}..." data-url="#{iniciativa_url(iniciativa)}" data-lang="es">Tweet</a>
 
   - content_for(:modals) do
     .modal.hide.fade{:id => "comment-modal-#{iniciativa.id}"}
