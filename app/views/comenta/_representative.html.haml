@@ -3,5 +3,6 @@
     %span.author= comentario.author
     Dejó un mensaje para:
     %span.representante= comentario.commentable.name
+    %span.date= comentario.created_at.to_s(:short)
   %p
     = "\"#{comentario.comment}\""

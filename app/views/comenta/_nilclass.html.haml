@@ -2,5 +2,6 @@
   .header.comenta
     %span.author= comentario.author
     hizo un comentario:
+    %span.date= comentario.created_at.to_s(:short)
   %p
     = "\"#{comentario.comment}\""

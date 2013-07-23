@@ -23,6 +23,7 @@ html {
 
         span {
           &.author { font-weight: bold; text-transform: none; }
+          &.date { float:right }
           &.representante { color: $dark-gray; text-transform: none;}
         }
       }
@@ -54,6 +55,7 @@ html {
 
           span {
             &.author { font-weight: bold; text-transform: none; }
+            &.date { float:right }
             &.representante { color: $grayish-cyan-darker; text-transform: none;}
           }
         }
