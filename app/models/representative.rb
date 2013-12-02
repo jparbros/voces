@@ -70,4 +70,8 @@ class Representative < ActiveRecord::Base
       'front/thumb_missing.png'
     end
   end
+  
+  def twitter_name
+    twitter.gsub("@","")
+  end
 end

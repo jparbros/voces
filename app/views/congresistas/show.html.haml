@@ -3,8 +3,10 @@
 %aside
   %h2
     Twitter
-  .tweet
-    = "Twitter no disponible" if @representante.twitter.blank?
+  - if @representante.twitter.present?
+    %a.twitter-timeline{'href' => "https://twitter.com/#{@representante.twitter_name}", 'data-widget-id' => "349632396825616384", 'data-chrome' => "nofooter transparent noheader",  'height' => "300", 'data-tweet-limit' => "5", 'lang' => "es", 'data-screen-name' => "#{@representante.twitter_name}"} Tweets by #{@representante.twitter_name}
+  - else
+    Twitter no disponible
 
   %h2
     Representaci&oacute;n
