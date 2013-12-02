@@ -11,8 +11,9 @@
         - else
           La propuesta mas vista
       %p.info
-        = I18n.localize(@iniciativa.presented_at, :format => :month_year)
-        %br
+        - if @iniciativa.main_at.present?
+          = I18n.localize(@iniciativa.main_at, :format => :month_year)
+          %br
         Propuesta por:
         %span
           = (@iniciativa.representative)? link_to(@iniciativa.representative.try(:name), congresista_path(@iniciativa.representative)) : ''
