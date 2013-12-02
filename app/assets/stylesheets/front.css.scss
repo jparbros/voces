@@ -38,7 +38,9 @@ a {
   -moz-border-radius-topleft: 10px;
   -moz-border-radius-bottomleft: 10px;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;}
+  border-bottom-left-radius: 10px;
+  position: fixed !important;
+}
 
 #sidecontent_0_pullout {
   color: #fff;
@@ -55,6 +57,7 @@ a {
   -webkit-border-bottom-left-radius: 10px;
   -moz-border-radius-bottomleft: 10px;
   border-bottom-left-radius: 10px;
+  position: fixed !important;
 }
 
 #sidecontent_0 {
