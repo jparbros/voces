@@ -4,7 +4,7 @@
     .header
       %span.author= comentario.author
       comento en la propuesta:
-      %span.date= comentario.created_at.to_s(:short)
+      %span.date= comentario.created_at.to_s(:long)
     .representante_foto
       = image_tag(iniciativa.representative.avatar.url(:thumb)) if iniciativa.representative
     .iniciativa_resumen

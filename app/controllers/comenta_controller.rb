@@ -2,7 +2,7 @@ class ComentaController < ApplicationController
 
   def show
     @comentario = Comment.new
-    @comentarios = Comment.all
+    @comentarios = Comment.order("created_at DESC").all
   end
 
   def create
