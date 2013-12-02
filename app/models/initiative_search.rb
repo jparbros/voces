@@ -43,7 +43,7 @@ class InitiativeSearch
 
   def find_by_keywords keywords
     keywords.split(' ').each do |query|
-       @initiative_search = @initiative_search.joins(:representative).joins(:topics).where('initiatives.title @@ :q OR initiatives.description @@ :q OR representatives.first_name @@ :q OR representatives.last_name @@ :q OR topics.name @@ :q', q: query)
+       @initiative_search = @initiative_search.joins(:representative).joins(:topics).where('initiatives.title @@ :q OR initiatives.description @@ :q OR representatives.first_name @@ :q OR representatives.last_name @@ :q OR topics.name @@ :q OR initiatives.number @@ :number', q: query, number: query.gsub(/-\d*/,""))
     end
   end
 
