@@ -1,5 +1,8 @@
 .page-header
   %h2 Iniciativas
+  %form.navbar-form.pull-right
+    %input.span2{type: "text", name: "query[keywords]", placeholder: "Buscar iniciativa"}
+    %button.btn{type: "submit"} Submit
 
 = link_to 'Nueva Iniciativa', new_admin_initiative_path, :class => [:btn, :primary]
 =link_to 'Ordenar Iniciativas', new_admin_order_path, :class => [:btn, :primary]

@@ -1,6 +1,10 @@
 class Admin::InitiativesController < Admin::BaseController
   def index
-    @initiatives = Initiative.page(params[:page])
+    if params[:query].present?
+      @initiatives = InitiativeSearch.new(params[:query], params[:page]).initiatives
+    else
+      @initiatives = Initiative.page(params[:page])
+    end
   end
 
   def show
