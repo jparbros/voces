@@ -28,8 +28,6 @@ class Comment < ActiveRecord::Base
   #
   # Extends
   #
-  include Defender::Spammable
-  configure_defender :keys => { content: :comment }
 
   def self.create_approved(comment)
     self.create(comment.merge({:approved => true}))
@@ -46,21 +44,5 @@ class Comment < ActiveRecord::Base
 
   def replies
     Comment.where("reply_to IS NOT NULL AND reply_to = ?", id)
-  end
-
-  def defensio_is_spam
-    if defensio_sig.nil?
-      data = {}
-      data.merge!({
-        'platform' => 'ruby',
-        'type' => (Defender.test_mode ? 'test' : 'comment'),
-        'document' => self.comment
-        })
-      document = Defender.defensio.post_document(data).last
-      self.spam = !document['allow']
-      self.defensio_sig = document['signature'].to_s
-      self.spaminess = document['spaminess'] if self.respond_to?(:spaminess=)
-      save
-    end
   end
 end
